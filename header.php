@@ -16,11 +16,5 @@
                 <li><a href="lostDiscs.php">Lost Discs</a></li>
             </ul>
         </nav>
-        <section class="sec1"></section>
-        <section class="content">
-            <p>.</p>
-        </section>
-    
         
-    </div>
     
