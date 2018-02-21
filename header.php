@@ -3,6 +3,7 @@
         <link rel="stylesheet" href="mystyle.css">
     </head>
     <body>
+        <?php echo"<h1>" $currentpage "</h1>"?>
         <div id="menu">
         	 <div id = menu>
     <ul>
