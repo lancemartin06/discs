@@ -4,14 +4,14 @@
     </head>
     <body>
         <div id="menu">
-        	<ul>
-            	<li class="menuitem"><a href="#">Home</a></li>
-                <li class="menuitem"><a href="#">About</a></li>
-                <li class="menuitem"><a href="#">Products</a></li>
-                <li class="menuitem"><a href="#">Services</a></li>
-                <li class="menuitem"><a href="#">Design</a></li>
-              <li class="menuitem"><a href="#">Contact</a></li>
-            </ul>
+        	 <div id = menu>
+    <ul>
+        <li><a href="diskHistory.php">Disk History</a></li>
+        <li><a href="courses.php">Boise Courses</a></li>
+        <li><a href="starting.php">Get Started</a></li>
+        <li><a href="lostDiscs.php">Lost Discs</a></li>
+    </ul>
+    </div>
         </div>
         
     
