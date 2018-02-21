@@ -1,22 +1,8 @@
 <html>
     <head>
         <link rel="stylesheet" href="mystyle.css">
-        <title>Home</title>
         <link rel="shortcut icon" href="/Pictures/favicon.ico" type="image/x-icon"/>
         <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
-        <script src= "https://code.jquery.com/jquery-3.2.1.js">
-        </script>
-        <script type="text/javascript">
-            $(window).on('scroll', function() {
-                    
-                    if($(window).scrollTop){
-                        $('nav').addClass('black');
-                    }
-                    else{
-                        $('nav').removeClass('black');
-                    }
-                })
-        </script>
     </head>
     
     <body>
