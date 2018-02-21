@@ -8,7 +8,7 @@
     <body>
         <div class = "wrapper">
         <nav class='black'>
-            <div class = "logo"><img src="Pictures/untitled4.png" align="left"></div>
+            <div class = "logo"><a href = "home.html"><img src="Pictures/untitled4.png" align="left"></a></div>
             <ul>
                 <li><a href="diskHistory.php">Disk History</a></li>
                 <li><a href="courses.php">Boise Courses</a></li>
