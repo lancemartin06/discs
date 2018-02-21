@@ -1,0 +1,107 @@
+@font-face { 
+	font-family: "Impact Label"; 
+	src: url('Fonts/impact-label/Impact_Label.tff'); 
+}
+@font-face{
+    font-family: "FFF Tusj";
+    src: url('FFF_Tusj.tff');
+}
+p{
+    font-family : "FFF Tusj" , bold;
+    text-align : center;
+    font-size : 60px; 
+}
+h1 {
+	font-family: "FFF Tusj";
+    text-align: center;
+    color: darkslategray;
+    text-emphasis-color: white;
+    font-size : 550%;
+}
+#menu{
+width:60%;
+height:20%;
+padding-left: 25%;
+float:left;
+}
+
+#menu ul {
+	list-style: none;
+	margin-top: 0%;
+     
+	
+}
+
+#menu li {
+    
+    display: inline;
+    border: 2px gray solid;
+    border-bottom: none;
+    
+    background-color:cadetblue;
+	
+}
+
+#middle{
+    padding-top: 5%;
+    padding-left: 10%;
+    width: 650px;
+    height: 400px;   
+}
+
+a:link, a:visited {
+    color: whitesmoke;
+    padding: 1px 25px;
+    text-align: center; 
+
+    display: inline-block;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+a:hover, a:active {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+.Enter {
+    height: 100px;
+    width: 300px;
+    float: bottom;
+	font-family: "FFF Tusj";
+    color: whitesmoke;
+    font-size : 50px;
+    padding-left: 40%;
+    padding-top: 35%;
+    
+}
+.stitched_element {
+    float:left;
+    
+border: 2px dashed  #ffffff;
+box-shadow: 0 0 0 8px black;
+background-image: url('Pictures/sign.jpg');
+background-size: 40%;
+margin-left: 25%;
+border-radius: 25px;
+    width: 50%;
+margin-top: 10%;
+    
+    
+
+}
+.backBlock {
+ background-image: url(Pictures/graybackground.jpg);
+ padding-left: 80%;
+ width: 60%;
+ 
+}
+body{
+    
+    
+}
+.intro{
+    background-repeat: no-repeat;
+    background-blend-mode: hard-light;
+     background-image: url('Pictures/boise.jpg');
+    background-size:cover; 
+}
