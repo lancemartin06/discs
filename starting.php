@@ -5,13 +5,11 @@ $thisPage="Starting";
 require_once("header.php");
 
 ?>
-
+    <title>Beginner's Guide</title>
     <div id='content'>
 
       
 
     </div>
 
-  </body>
-
-</html>
+<?php require_once("footer.php"); ?>

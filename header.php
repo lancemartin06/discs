@@ -7,9 +7,9 @@
         <script src= "https://code.jquery.com/jquery-3.2.1.js">
         </script>
         <script type="text/javascript">
-            $(window).on('scroll', function(){
+            $(window).on('scroll', function() {
                     
-                    if($(window).scrollTop()){
+                    if($(window).scrollTop){
                         $('nav').addClass('black');
                     }
                     else{
@@ -21,7 +21,7 @@
     
     <body>
         <div class = "wrapper">
-        <nav>
+        <nav class='black'>
             <div class = "logo"><img src="Pictures/untitled4.png" align="left"></div>
             <ul>
                 <li><a href="diskHistory.php">Disk History</a></li>

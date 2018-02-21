@@ -135,6 +135,17 @@ body{
     font-family: Quicksand;   
     
 }
+.footer{
+    
+    font-size: 12;
+    left: 0; 
+    bottom:0;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    text-align: center;
+    
+}
 .intro{
     background-repeat: no-repeat;
     background-blend-mode: hard-light;

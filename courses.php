@@ -5,13 +5,6 @@ $thisPage="Courses";
 require_once("header.php");
 
 ?>
+<title>Courses</title>
 
-    <div id='content'>
-
-      
-
-    </div>
-
-  </body>
-
-</html>
+<?php require_once("footer.php"); ?>
