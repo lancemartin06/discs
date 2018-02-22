@@ -7,7 +7,7 @@ require_once("header.php");
 ?>
     <title>Beginner's Guide</title>
         
-        <section class="sec1"></section>
+        <section class="sec1">You're gonna learn today!</section>
         <section class="content">
             <p>.</p>
         </section>
