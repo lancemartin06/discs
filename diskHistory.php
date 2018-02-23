@@ -1,5 +1,5 @@
 <?php
-$thisPage="Disk History";
+$thisPage= 'diskHistory';
 require_once("header.php");
 ?>
 <title>History</title>

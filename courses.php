@@ -1,6 +1,6 @@
 <?php
 
-$thisPage="Courses";
+$thisPage='courses';
 
 require_once("header.php");
 

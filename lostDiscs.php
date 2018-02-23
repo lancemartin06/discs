@@ -1,6 +1,6 @@
 <?php
 
-$thisPage="LostDiscs";
+$thisPage='lostDiscs';
 
 require_once("header.php");
 

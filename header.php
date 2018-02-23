@@ -10,10 +10,10 @@
         <nav class='black'>
             <div class = "logo"><a href = "home.html"><img src="Pictures/untitled4.png" align="left"></a></div>
             <ul>
-                <li><a href="diskHistory.php">Disk History</a></li>
-                <li><a href="courses.php">Boise Courses</a></li>
-                <li><a href="starting.php">Get Started</a></li>
-                <li><a href="lostDiscs.php">Lost Discs</a></li>
+                <li><a<?php if($thisPage = 'diskHistory'){echo" class=selected "}?> href="diskHistory.php">Disk History</a></li>
+                <li><a<?php if($thisPage = 'courses'){echo" class=selected "}?> href="courses.php">Boise Courses</a></li>
+                <li><a<?php if($thisPage = 'starting'){echo" class=selected "}?> href="starting.php">Get Started</a></li>
+                <li><a<?php if($thisPage = 'lostDiscs'){echo" class=selected "}?> href="lostDiscs.php">Lost Discs</a></li>
             </ul>
         </nav>
         

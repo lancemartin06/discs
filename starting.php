@@ -1,6 +1,6 @@
 <?php
 
-$thisPage="Starting";
+$thisPage='starting';
 
 require_once("header.php");
 
