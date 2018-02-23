@@ -1,6 +1,6 @@
 
     <div class = "footer">
-        Footer-I did it! lancemartin@u.boisestate.edu
+        Contact Me Directly: lancemartin@u.boisestate.edu
     </div>
 
   </body>
