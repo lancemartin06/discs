@@ -25,7 +25,7 @@ nav.black{
 }
 
 nav .logo{
-    padding: 5% 5%;
+    padding: 5% 2%;
     height: 1%;
     float: left;
     font-size: 2px;
@@ -40,7 +40,7 @@ nav .black .logo{
 
 nav ul{
     list-style: none;
-    float: right;
+    float: center;
     margin: 3%; 
     display: flex;
 }
@@ -50,10 +50,10 @@ nav ul li {
     
 }
 
-nav ul li a{
-    line-height: 5%; 
+nav ul li a{ 
     color: whitesmoke;
-    padding: 15% 20%; 
+    padding: 12px;
+    display:inline;
     text-decoration: none;
     text-transform: uppercase;
     transition: .3s;
