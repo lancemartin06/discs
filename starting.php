@@ -1,6 +1,4 @@
 <?php
-    session_start();
-
     define("PAGENAME", "starting");
 
     require_once("header.php");

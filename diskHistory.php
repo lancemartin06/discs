@@ -1,5 +1,4 @@
 <?php
-    session_start();
     define("PAGENAME", "discHistory");
     require_once("header.php");
 ?>
