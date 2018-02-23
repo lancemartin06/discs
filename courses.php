@@ -1,8 +1,8 @@
 <?php
+    session_start();
+    define("PAGENAME", "courses");
 
-define("PAGENAME", "courses");
-
-require_once("header.php");
+    require_once("header.php");
 
 ?>
 <title>Courses</title>

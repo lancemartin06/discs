@@ -1,8 +1,9 @@
 <?php
+    session_start();
 
-define("PAGENAME", "starting");
+    define("PAGENAME", "starting");
 
-require_once("header.php");
+    require_once("header.php");
 
 ?>
     <title>Beginner's Guide</title>

@@ -1,6 +1,7 @@
 <?php
-define("PAGENAME", "discHistory");
-require_once("header.php");
+    session_start();
+    define("PAGENAME", "discHistory");
+    require_once("header.php");
 ?>
 <title>History</title>
     

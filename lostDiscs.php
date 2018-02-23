@@ -1,8 +1,9 @@
 <?php
+    session_start();
 
-define("PAGENAME", "lostDiscs");
+    define("PAGENAME", "lostDiscs");
 
-require_once("header.php");
+    require_once("header.php");
 
 ?>
     <title>Lost Discs</title>
