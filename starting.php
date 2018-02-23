@@ -1,6 +1,6 @@
 <?php
 
-$thisPage='starting';
+define("PAGENAME", "starting");
 
 require_once("header.php");
 
