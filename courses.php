@@ -10,7 +10,10 @@
         <section class="content">
             <pre><h1>Anne Morrison</h1>
                 <img src = "Pictures/Courses/annemorrison.jpg">
-                Anne Morrison park is a great park to disc golf. It supports a large course with many challenging and obstacles. The park is very friendly to disc golfers and is very popular to many people in the communitiy. 
+                Anne Morrison park is a great park to disc golf. 
+                It supports a large course with many challenging and obstacles. 
+                The park is very friendly to disc golfers and is very popular 
+                to many people in the communitiy. 
             </pre>
         </section>
         <section class="content">

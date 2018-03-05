@@ -134,8 +134,11 @@ margin-top: 10%;
     float: left; 
 }
 .content pre{
-    text-align: center;
-    padding: 10% 10%
+    font-family: Quicksand;
+    margin: 30px auto;
+    text-align: justify;
+    font-size: 20px;
+    line-height: 30px;
 }
 .sec1 img{
     padding-top: 10%;
