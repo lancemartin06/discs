@@ -6,7 +6,7 @@
 ?>
 <title>Courses</title>
 
-<section class="sec1"><p>GOOGLE MAP</p></section>
+<section class="sec1"><div class = "firstCenter"><p>GOOGLE MAP</p><img src="Pictures/Courses/discgolf.png"></div></section>
         <section class="content">
             <pre><h1>Anne Morrison</h1>
                 <img src = "Pictures/Courses/annemorrison.jpg">
