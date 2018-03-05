@@ -6,7 +6,7 @@
 ?>
 <title>Courses</title>
 
-<section class="sec1"><div class = "firstCenter"><p>GOOGLE MAP</p><img src="Pictures/Courses/discgolf.png"></div></section>
+<section class="sec1"><div class = "firstCenter"><p>GOOGLE MAP</p></div></section>
         <section class="content">
             <pre><h1>Anne Morrison</h1>
                 <img src = "Pictures/Courses/annemorrison.jpg">
@@ -15,7 +15,7 @@
         </section>
         <section class="content">
             <pre><h1>Bogus Basin</h1>
-                <img src = "Pictures/Courses/annemorrison.jpg">
+                <img src = "Pictures/Courses/bogus.jpg">
                 Bogus Basin is normally thought of as a ski resort, but in the summer time, it becomes
                 incredible scene for disc golf. It is much more challenging than your average course, 
                 it offers a lot more diversity and unforgettable scenery. 
