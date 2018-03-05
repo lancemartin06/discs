@@ -133,6 +133,10 @@ margin-top: 10%;
 .content img{
     float: left; 
 }
+.content pre{
+    text-align: center;
+    padding: 10% 10%
+}
 .sec1 img{
     padding-top: 10%;
 }
