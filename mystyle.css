@@ -130,6 +130,9 @@ margin-top: 10%;
     
    
 }
+.content img{
+    float: left; 
+}
 .sec1 img{
     padding-top: 10%;
 }
