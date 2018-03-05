@@ -8,9 +8,9 @@
 
 <section class="sec1"><p>GOOGLE MAP</p></section>
         <section class="content">
-            <p>Anne Morrison
+            <p><h1>Anne Morrison</h1>
                 <img src = "Pictures/Courses/annemorrison.jpg">
-                Anne Morrison park is a great park to play disc golf. Mostly it's there for homeless people to camp. 
+                Anne Morrison park is a great park to disc golf. It supports a large course with many challenging and obstacles. The park is very friendly to disc golfers and is very popular to many people in the communitiy. 
             </p>
         </section>
     
