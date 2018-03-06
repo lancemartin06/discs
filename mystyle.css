@@ -163,14 +163,15 @@ body{
     width: 100%;
     background: rgba(0,0,0,0.6);
     color: white;
+    margin-top: 10px;
     text-align: center;
     
 }
 #map{
     margin-top: 15%;
-    margin-left: 25%;
-    width:400px;
-    height:400px;
+    margin-left: 30%;
+    width:500px;
+    height:500px;
     background:black;
     border-style: solid;
 }
