@@ -3,8 +3,6 @@
 
     require_once("header.php");
 
-}
-
 ?>
 <title>Courses</title>
 
