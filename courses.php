@@ -19,7 +19,7 @@ function myMap() {
 var mapOptions = {
     center: new google.maps.LatLng(43.612, -116.22),
     zoom: 15,
-    mapTypeId: google.maps.MapTypeId.HYBRID
+    mapTypeId: google.maps.MapTypeId.TERRAIN
 }
 var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 }
