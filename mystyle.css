@@ -132,6 +132,7 @@ margin-top: 10%;
 }
 .content img{
     float: left; 
+    padding-left: 20px;
 }
 .content pre{
     font-family: Quicksand;
@@ -164,6 +165,12 @@ body{
     color: white;
     text-align: center;
     
+}
+#map{
+    width:400px;
+    height:400px;
+    background:black;
+    border-style: solid;
 }
 .intro{
     background-repeat: no-repeat;
