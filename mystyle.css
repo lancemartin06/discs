@@ -176,6 +176,10 @@ body{
     background:black;
     border-style: solid;
 }
+iframe{
+    margin-top: 20%;
+    margin-left:25%;
+}
 .intro{
     background-repeat: no-repeat;
     background-blend-mode: hard-light;
