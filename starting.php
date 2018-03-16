@@ -8,6 +8,7 @@
         
         <section class="sec1">You're gonna learn today!</section>
         <section class="content">
+            <a href="blog.php">blog</a>
             <p>.</p>
         </section>
     
