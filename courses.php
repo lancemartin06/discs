@@ -8,8 +8,11 @@
 
 
 <section class="sec1">
+    Section1
     <div class = "firstCenter">
+        first center?
         <div id="map">
+            My map Div!
         </div>
     </div>
 </section>
