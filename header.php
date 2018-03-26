@@ -1,6 +1,6 @@
 <html>
     <head>
-        <link rel="stylesheet" href="mystyle.css">
+        <link rel="stylesheet" href="CSS/mystyle.css">
         <link rel="shortcut icon" href="/Pictures/favicon.ico" type="image/x-icon"/>
         <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
     </head>
