@@ -3,8 +3,6 @@
     session_start();
 
     define("PAGENAME", "lostDiscs");
-
-    require_once("header.php");
     
 ?>
     <link rel="stylesheet" href="CSS/mystyle2.css">
