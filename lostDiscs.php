@@ -1,7 +1,5 @@
 
 <?php 
-
-    require 'db.php';
     session_start();
 
     define("PAGENAME", "lostDiscs");
