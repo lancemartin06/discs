@@ -85,7 +85,7 @@
 
         </div>  
         
-      </div><!-- tab-content -->
+      </div>
       
 </div> 
         
