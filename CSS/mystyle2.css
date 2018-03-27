@@ -137,8 +137,8 @@ label.highlight {
 input, textarea {
   font-size: 22px;
   display: block;
-  width: 300px;
-  height: 300px;
+  width: 500px;
+  height: 50px;
   padding: 5px 10px;
   background: none;
   background-image: none;
