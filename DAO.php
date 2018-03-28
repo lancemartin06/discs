@@ -21,6 +21,7 @@ class Dao {
       $this->logger->logFatal("The database connection failed.");
     }
   }
+    
   public function getDiscs () {
      $conn = $this->getConnection();
      $query = $conn->prepare("select * from disc_inventory");
