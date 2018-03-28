@@ -33,9 +33,8 @@ else { // Email doesn't already exist in a database, proceed...
             . "VALUES ('$email','$password','$name','$phone')";
 
     // Add user to the database
-    if ( $dao->query($sql) ){
+    if ( $conn->query($sql) ){
 
-        $_SESSION['active'] = 1; //0 until user activates their account with verify.php
         $_SESSION['logged_in'] = true; // So we know the user has logged in
     }
 

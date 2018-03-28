@@ -71,14 +71,13 @@
               </label>
               <input type="text" required autocomplete="off" name='name' />
             </div>
-        
+          </div>
             <div class="field-wrap">
               <label>
                 Email Address<span class="req">*</span>
               </label>
               <input type="email"required autocomplete="off" name='email' />
             </div>
-          </div>
 
           <div class="field-wrap">
             <label>
