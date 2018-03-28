@@ -22,14 +22,4 @@ class Dao {
     }
   }
     
-  public function getDiscs () {
-     $conn = $this->getConnection();
-     $query = $conn->prepare("select * from disc_inventory");
-     $query->setFetchMode(PDO::FETCH_ASSOC);
-     $query->execute();
-     $results = $query->fetchAll();
-     $this->logger->logDebug(__FUNCTION__ . " " . print_r($results,1));
-     return $results;
-  }
-
 } 
