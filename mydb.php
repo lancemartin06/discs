@@ -4,18 +4,19 @@
   private $user = "bcc29ebdb3e631";
   private $pass = "0a186730";
 // Create connection
-$dao = new mysqli_connect($servername, $user, $pass, $db);
+$conn = new mysqli($servername, $user, $pass);
+//$conn = new mysqli($servername, $user, $pass, $db);
 // Check connection
 
-if ($mysqli->connect_error) {
+if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-if ($mysqli) {
+if ($conn) {
     _SESSION['message'] ="Connection successful";
 } else {
     _SESSION['message'] ="Connection FAILED";
 }
-
+?>
 
 
