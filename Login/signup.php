@@ -30,7 +30,7 @@ else { // Email doesn't already exist in a database, proceed...
 
     // active is 0 by DEFAULT (no need to include it here)
     $sql = "INSERT INTO users (email, password, name, phone) " 
-            . "VALUES ('$first_name','$last_name','$email','$password', '$hash')";
+            . "VALUES ('$email','$password','$name','$phone')";
 
     // Add user to the database
     if ( $dao->query($sql) ){
