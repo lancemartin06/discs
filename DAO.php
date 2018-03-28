@@ -12,13 +12,11 @@ class Dao {
   private function getConnection () {
     try {
       $conn =
-        new PDO("mysql:host={$this->host};dbname={$this->db}", $this->user,
-            $this->pass);
-      $this->logger->logDebug("Established a database connection.");
-      return $conn;
+        new PDO("mysql:host={$this->host};dbname={$this->db}", $this->user, $this->pass);
+        return $conn;
+        
     } catch (Exception $e) {
-      echo "connection failed: " . $e->getMessage();
-      $this->logger->logFatal("The database connection failed.");
+      echo "connection failed!";
     }
   }
     
