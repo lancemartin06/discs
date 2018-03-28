@@ -1,8 +1,9 @@
 
 <?php 
     session_start();
+    require_once("mydb.php");    
     require_once("header.php");
-    require_once("mydb.php");
+    
     define("PAGENAME", "lostDiscs");
     
 ?>
