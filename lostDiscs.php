@@ -3,7 +3,7 @@
     session_start();
     require_once("header.php");
     define("PAGENAME", "lostDiscs");
-    
+    require(Dao.php)
 ?>
     <link rel="stylesheet" href="CSS/mystyle2.css">
     <title>Lost Discs</title>
@@ -58,51 +58,102 @@
         </div>
           
         <div id="signup">   
-          <h1>Sign Up for Free</h1>
+          <h1>Sign Up to Find Your Discs</h1>
           
           <form action="lostDiscs.php" method="post" autocomplete="off">
           
           <div class="top-row">
             <div class="field-wrap">
               <label>
-                First Name<span class="req">*</span>
+                Name(First and Last)<span class="req">*</span>
               </label>
-              <input type="text" required autocomplete="off" name='firstname' />
+              <input type="text" required autocomplete="off" name='name' />
             </div>
         
             <div class="field-wrap">
               <label>
-                Last Name<span class="req">*</span>
+                Email Address<span class="req">*</span>
               </label>
-              <input type="text"required autocomplete="off" name='lastname' />
+              <input type="email"required autocomplete="off" name='email' />
             </div>
           </div>
 
           <div class="field-wrap">
             <label>
-              Email Address<span class="req">*</span>
+              Set A Password<span class="req">*</span>
             </label>
-            <input type="email"required autocomplete="off" name='email' />
+            <input type="password"required autocomplete="off" name='password' />
           </div>
           
           <div class="field-wrap">
             <label>
-              Set A Password<span class="req">*</span>
+              Phone Number (Ex: 20812345678)<span class="req">*</span>
             </label>
-            <input type="password"required autocomplete="off" name='password'/>
+            <input type="phone"required autocomplete="off" name='phone'/>
           </div>
           
           <button type="submit" class="button button-block" name="register" />Register</button>
           
           </form>
+        
+        
+        
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        
+        
+        
+        <script>
+            $('.form').find('input, textarea').on('keyup blur focus', function (e) {
+  
+            var $this = $(this),
+            label = $this.prev('label');
+
+                  if (e.type === 'keyup') {
+                        if ($this.val() === '') {
+                      label.removeClass('active highlight');
+                    } else {
+                      label.addClass('active highlight');
+                    }
+                } else if (e.type === 'blur') {
+                    if( $this.val() === '' ) {
+                        label.removeClass('active highlight'); 
+                        } else {
+                        label.removeClass('highlight');   
+                        }   
+                } else if (e.type === 'focus') {
+
+                  if( $this.val() === '' ) {
+                        label.removeClass('highlight'); 
+                        } 
+                  else if( $this.val() !== '' ) {
+                        label.addClass('highlight');
+                        }
+                }
+
+            });
+
+        $('.tab a').on('click', function (e) {
+  
+          e.preventDefault();
+
+          $(this).parent().addClass('active');
+          $(this).parent().siblings().removeClass('active');
+
+          target = $(this).attr('href');
+
+          $('.tab-content > div').not(target).hide();
+
+          $(target).fadeIn(600);
+
+        });</script>
 
         </div>  
         
       </div>
       
-</div> 
+    </div> 
         
-        </section>
-    </div>
+  </section>
+</div>
 
  <?php require_once("footer.php"); ?>
