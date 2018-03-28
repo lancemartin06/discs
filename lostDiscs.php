@@ -3,7 +3,7 @@
     session_start();
     require_once("header.php");
     define("PAGENAME", "lostDiscs");
-    require(Dao.php)
+    require_once(Dao.php)
 ?>
     <link rel="stylesheet" href="CSS/mystyle2.css">
     <title>Lost Discs</title>
