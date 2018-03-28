@@ -4,7 +4,7 @@
   private $user = "bcc29ebdb3e631";
   private $pass = "0a186730";
 // Create connection
-$mysqli = new mysqli($servername, $user, $pass, $db);
+$mysqli = new mysqli_connect($servername, $user, $pass, $db);
 // Check connection
 
 if ($mysqli->connect_error) {
