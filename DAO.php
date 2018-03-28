@@ -10,14 +10,11 @@ class Dao {
 
 
   private function getConnection () {
-    try {
       $conn =
         new PDO("mysql:host={$this->host};dbname={$this->db}", $this->user, $this->pass);
         return $conn;
         
-    } catch (Exception $e) {
-      echo "connection failed!";
-    }
+    
   }
     
 } 
