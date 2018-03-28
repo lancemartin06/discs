@@ -17,7 +17,7 @@ $password = $conn->escape_string($_POST['password']);
 
       
 // Check if user with that email already exists
-$result = $dao->query("SELECT * FROM users WHERE email='$email'") or die($dao->error());
+$result = $dao->query("SELECT * FROM user WHERE email='$email'") or die($dao->error());
 
 // We know user email exists if the rows returned are more than 0
 if ( $result->num_rows > 0 ) {
@@ -29,8 +29,8 @@ if ( $result->num_rows > 0 ) {
 else { // Email doesn't already exist in a database, proceed...
 
     // active is 0 by DEFAULT (no need to include it here)
-    $sql = "INSERT INTO users (email, password, name, phone) " 
-            . "VALUES ('$email','$password','$name','$phone')";
+    $sql = "INSERT INTO user (email, password, name, phone) " 
+            . "VALUES ('$email','$password','$name','$phone');";
 
     // Add user to the database
     if ( $conn->query($sql) ){

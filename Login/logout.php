@@ -3,16 +3,13 @@
 session_start();
 session_destroy(); 
 $conn->close();
-?>
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Error</title>
-</head>
+define("PAGENAME", "logout");
+require_once("header.php");
 
-<body>
-    <div class="form">
+?>
+    <title>Logout</title>
+        
+        <section class="sec1"><div class="form">
         
           <h1>May the force be with you, or whatever.</h1>
               
@@ -20,6 +17,14 @@ $conn->close();
           
           <a href="index.php"><button class="button button-block"/>Home</button></a>
 
+    </div></section>
+        <section class="content">
+            
+            <p>.</p>
+        </section>
+    
+        
     </div>
-</body>
-</html>
+
+<?php require_once("footer.php"); ?>
+
