@@ -4,16 +4,17 @@
   private $user = "bcc29ebdb3e631";
   private $pass = "0a186730";
 // Create connection
-$dao = new mysqli($servername, $user, $pass, $db);
+$mysqli = new mysqli($servername, $user, $pass, $db);
 // Check connection
-if ($conn->connect_error) {
+
+if ($mysqli->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
+if ($mysqli) {
+    _SESSION['message'] ="Connection successful";
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    _SESSION['message'] ="Connection FAILED";
 }
 
 
