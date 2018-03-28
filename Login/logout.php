@@ -15,7 +15,7 @@ require_once("header.php");
               
           <p><?= 'You have been logged out!'; ?></p>
           
-          <a href="index.php"><button class="button button-block"/>Home</button></a>
+          <a href="lostDiscs.php"><button class="button button-block"/>Home</button></a>
 
     </div></section>
         <section class="content">
