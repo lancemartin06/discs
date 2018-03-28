@@ -2,7 +2,7 @@
 <?php 
     session_start();
     require_once("header.php");
-    require_once("Dao.php");
+    require("Dao.php");
     $d = new Dao();
     $dao= d.getConnection();
     define("PAGENAME", "lostDiscs");
