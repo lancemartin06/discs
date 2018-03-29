@@ -1,10 +1,10 @@
 
 <?php 
-    session_start();
+    
         
     require_once("header.php");
     require 'mydb.php';
-    
+    session_start();
     define("PAGENAME", "lostDiscs");
     
 ?>
