@@ -9,20 +9,21 @@
     
 ?>
     <link rel="stylesheet" href="CSS/mystyle2.css">
+    <?php 
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            if(isset($_POST['login'])){
+                    require 'Login/login.php';
+             }
+                
+            elseif (isset($_POST['signup'])){
+                    require 'Login/signup.php';
+            }
+        }
+    ?>
     <title>Lost Discs</title>
         <section class="sec1">
             
-            <?php 
-                if($_SERVER['REQUEST_METHOD'] == 'POST'){
-                    if(isset($_POST['login'])){
-                        require 'Login/login.php';
-                    }
-                
-                elseif (isset($_POST['signup'])){
-                    require 'Login/signup.php';
-                }
-            }
-            ?>
+            
             
     <div class="form">
       
