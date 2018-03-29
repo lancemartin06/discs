@@ -4,8 +4,8 @@
   private $user = "bcc29ebdb3e631";
   private $pass = "0a186730";
 // Create connection
-$conn = new mysqli($servername, $user, $pass);
-//$conn = new mysqli($servername, $user, $pass, $db);
+//$conn = new mysqli($servername, $user, $pass);
+$conn = new mysqli($servername, $user, $pass, $db);
 // Check connection
 
 if ($conn->connect_error) {
