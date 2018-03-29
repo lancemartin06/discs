@@ -93,7 +93,7 @@
             <input type="phone"required autocomplete="off" name='phone'/>
           </div>
           
-          <button type="submit" class="button button-block" name="register" />Register</button>
+          <button type="submit" class="button button-block" name="signup" />Sign Up!</button>
           
           </form>
         

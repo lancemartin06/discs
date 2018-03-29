@@ -42,4 +42,4 @@ else { // Email doesn't already exist in a database, proceed...
     }
 
 }
-?>
+
