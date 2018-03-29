@@ -3,6 +3,7 @@
     session_start();
         
     require_once("header.php");
+    require 'mydb.php';
     
     define("PAGENAME", "lostDiscs");
     
