@@ -17,7 +17,7 @@ $password = $conn->escape_string($_POST['password']);
 
       
 // Check if user with that email already exists
-$result = $conn->query("SELECT * FROM user WHERE email='$email'") or die($dao->error());
+$result = $conn->query("SELECT * FROM user WHERE email='$email'") or die($conn->error());
 
 // We know user email exists if the rows returned are more than 0
 if ( $result->num_rows > 0 ) {
@@ -42,3 +42,4 @@ else { // Email doesn't already exist in a database, proceed...
     }
 
 }
+?>
