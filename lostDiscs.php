@@ -3,7 +3,7 @@
     
         
     require_once("header.php");
-    require 'mydb.php';
+    require_once("mydb.php");
     session_start();
     define("PAGENAME", "lostDiscs");
     
@@ -73,6 +73,7 @@
               <input type="text" required autocomplete="off" name='name' />
             </div>
           </div>
+            
             <div class="field-wrap">
               <label>
                 Email Address<span class="req">*</span>
