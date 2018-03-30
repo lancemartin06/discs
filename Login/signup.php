@@ -14,11 +14,11 @@ $email = $_POST['email'];
 $name = $_POST['name'];
 $phone = $_POST['phone']);
 $password = $_POST['password'];
-
+echo("I'm here in signup. Let's see if i work?");
       
 // Check if user with that email already exists
 $result = $conn->query("SELECT * FROM user WHERE email='$email'") or die($conn->error());
-
+echo($result);
 // We know user email exists if the rows returned are more than 0
 if ( $result->num_rows > 0 ) {
     
@@ -33,7 +33,7 @@ else { // Email doesn't already exist in a database, proceed...
 
     // Add user to the database
     if ( $conn->query($sql) ){
-
+        echo("Yuo did it!");
         $_SESSION['logged_in'] = true; // So we know the user has logged in
     }
 
