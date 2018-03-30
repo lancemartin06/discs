@@ -26,7 +26,8 @@ catch(PDOException $e)
     <?php 
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
             if(isset($_POST['login'])){
-                    require 'Login/login.php';
+                echo("Trying to do login...");    
+                require 'Login/login.php';
              }
                 
             elseif (isset($_POST['signup'])){
