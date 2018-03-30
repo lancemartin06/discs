@@ -1,8 +1,8 @@
-<?php   
-    session_start();
-    define("PAGENAME", "lostDiscs");
-    require_once'header.php';
-    //include("dao.php");
+<?php
+session_start();
+define("PAGENAME", "lostDiscs");
+require_once'header.php';
+//include("dao.php");
 $servername = "us-cdbr-iron-east-05.cleardb.net";
 $dbname = "heroku_460fd0693927d5a";
 $username = "bcc29ebdb3e631";
@@ -13,30 +13,24 @@ try {
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo "Connected successfully"; 
-     $_SESSION['conn'] = $conn; 
+    $_SESSION['conn'] = $conn; 
     }
-catch(PDOException $e)
-    {
+catch (PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
-    }
+}
    
     
 ?>
     <link rel="stylesheet" href="CSS/mystyle2.css">
     <?php 
-        if($_SERVER['REQUEST_METHOD'] == 'POST'){
-            if(isset($_POST['login'])){
-                echo("Trying to do login...");    
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            if (isset($_POST['login'])) {
                 include 'Login/login.php';
-             }
-                
-            elseif (isset($_POST['signup'])){
-                echo("Trying to do signup...");
+            } elseif (isset($_POST['signup'])) {
                     include 'Login/signup.php';
-                echo"did it work?";
             }
         }
-    ?>
+?>
     <title>Lost Discs</title>
     <section class="sec1">
     <div class="form">
@@ -171,5 +165,4 @@ catch(PDOException $e)
         
   </section>
 </div>
-
- <?php require_once("footer.php"); ?>
+<?php require_once("footer.php"); ?>
