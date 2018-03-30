@@ -10,10 +10,10 @@ $_SESSION['name'] = $_POST['name'];
 
 // Escape all $_POST variables to protect against SQL injections
 
-$email = $conn->escape_string($_POST['email']);
-$name = $conn->escape_string($_POST['name']);;
-$phone = $conn->escape_string($_POST['phone']);;
-$password = $conn->escape_string($_POST['password']);
+$email = $_POST['email'];
+$name = $_POST['name'];
+$phone = $_POST['phone']);
+$password = $_POST['password'];
 
       
 // Check if user with that email already exists
