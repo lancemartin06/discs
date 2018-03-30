@@ -12,24 +12,23 @@ try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Connected successfully"; 
-    $_SESSION['conn'] = $conn; 
-    }
-catch (PDOException $e) {
+    echo "Connected successfully";
+    $_SESSION['conn'] = $conn;
+} catch (PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
 }
    
     
 ?>
     <link rel="stylesheet" href="CSS/mystyle2.css">
-    <?php 
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            if (isset($_POST['login'])) {
-                include 'Login/login.php';
-            } elseif (isset($_POST['signup'])) {
+    <?php
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        if (isset($_POST['login'])) {
+            include 'Login/login.php';
+        } elseif (isset($_POST['signup'])) {
                     include 'Login/signup.php';
-            }
         }
+    }
 ?>
     <title>Lost Discs</title>
     <section class="sec1">
