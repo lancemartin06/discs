@@ -1,4 +1,5 @@
 <?php
+echo"here I am! In the PHP file. lol";
 $servername = "us-cdbr-iron-east-05.cleardb.net";
 $dbname = "heroku_460fd0693927d5a";
 $username = "bcc29ebdb3e631";
