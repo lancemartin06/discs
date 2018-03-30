@@ -1,14 +1,17 @@
 <?php
-// Dao.php
-// class for getting products in MySQL
-class Dao {
+$servername = 'us-cdbr-iron-east-05.cleardb.net';
+$db = 'heroku_460fd0693927d5a';
+$username = 'bcc29ebdb3e631';
+$password = '0a186730';
 
-  private $host = "us-cdbr-iron-east-05.cleardb.net";
-  private $db = "heroku_460fd0693927d5a";
-  private $user = "bcc29ebdb3e631";
-  private $pass = "0a186730";
-
-
-
-      $dao = new PDO("mysql:host={$this->host};dbname={$this->db}", $this->user, $this->pass);
-} 
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=$db", $username, $password);
+    // set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Connected successfully"; 
+    }
+catch(PDOException $e)
+    {
+    echo "Connection failed: " . $e->getMessage();
+    }
+?>
