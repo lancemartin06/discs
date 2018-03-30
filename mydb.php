@@ -8,7 +8,8 @@
 $mysqli = new mysqli($servername, $user, $pass, $db);
 
 // Check connection
-if ($conn->connect_error) {
+if ($mysqli->connect_error) {
+    echo("Error with connecting to DB." . "\n" . $mysqli->connect_error . "\n" . $mysqli->connect_errno . "\n");
     die("Connection failed: " . $conn->connect_error);
 } 
 
