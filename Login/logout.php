@@ -1,11 +1,12 @@
 <?php
 /* Log out process, unsets and destroys session variables */
 session_start();
-session_destroy(); 
-$conn->close();
+
+
 define("PAGENAME", "logout");
 require_once("header.php");
-
+$_SESSION['conn'] = null;
+session_destroy(); 
 ?>
     <title>Logout</title>
         
@@ -15,7 +16,7 @@ require_once("header.php");
               
           <p><?= 'You have been logged out!'; ?></p>
           
-          <a href="lostDiscs.php"><button class="button button-block"/>Home</button></a>
+          <a href="index.php"><button class="button button-block"/>Home</button></a>
 
     </div></section>
         <section class="content">

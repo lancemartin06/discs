@@ -6,7 +6,7 @@
 // Set session variables to be used on profile.php page
 $_SESSION['email'] = $_POST['email'];
 $_SESSION['name'] = $_POST['name'];
-
+$conn = $_SESSION['conn'];
 
 // Escape all $_POST variables to protect against SQL injections
 

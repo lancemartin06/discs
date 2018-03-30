@@ -13,6 +13,7 @@ try {
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo "Connected successfully"; 
+     $_SESSION['conn'] = $conn; 
     }
 catch(PDOException $e)
     {
@@ -26,12 +27,12 @@ catch(PDOException $e)
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
             if(isset($_POST['login'])){
                 echo("Trying to do login...");    
-                require 'Login/login.php';
+                include 'Login/login.php';
              }
                 
             elseif (isset($_POST['signup'])){
                 echo("Trying to do signup...");
-                    require 'Login/signup.php';
+                    include 'Login/signup.php';
             }
         }
     ?>
