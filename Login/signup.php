@@ -16,7 +16,7 @@ $password = $_POST['password'];
 echo("I'm over here or whatever");
       
 // Check if user with that email already exists
-$result = $conn->query("SELECT * FROM user WHERE email='$email'");
+$result = $conn->query("SELECT * FROM user WHERE email='butt@butt.com'");
 echo($result);
 echo "I made it past the first query.";
 // We know user email exists if the rows returned are more than 0
