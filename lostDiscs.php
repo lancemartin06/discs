@@ -1,4 +1,3 @@
-
 <?php   
     session_start();
     define("PAGENAME", "lostDiscs");
@@ -31,6 +30,7 @@ catch(PDOException $e)
              }
                 
             elseif (isset($_POST['signup'])){
+                echo("Trying to do signup...");
                     require 'Login/signup.php';
             }
         }
