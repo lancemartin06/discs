@@ -14,11 +14,11 @@ $name = $_POST['name'];
 $phone = $_POST['phone'];
 $password = $_POST['password'];
 echo($conn);
-      
+echo "At first query.";
 // Check if user with that email already exists
 $result = $conn->query("SELECT * FROM user WHERE email='butt@butt.com'");
 echo($result);
-echo "I made it past the first query.";
+
 // We know user email exists if the rows returned are more than 0
 if ($result > 0) {
     echo('User with this email already exists!');
