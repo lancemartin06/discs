@@ -9,7 +9,7 @@ $mysqli = new mysqli($servername, $user, $pass, $db);
 
 // Check connection
 if ($mysqli->connect_error) {
-    echo("Error with connecting to DB." . "\n" . $mysqli->connect_error . "\n" . $mysqli->connect_errno . "\n");
+    echo("<html> Error with connecting to DB." . "\n" . $mysqli->connect_error . "\n" . $mysqli->connect_errno . "\n </html>");
     die("Connection failed: " . $conn->connect_error);
 } 
 
