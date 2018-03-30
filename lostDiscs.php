@@ -1,11 +1,9 @@
 
-<?php 
-    
-        
-    require_once("header.php");
-    include 'mydb.php';
+<?php   
+    //require_once("header.php");
     session_start();
-    define("PAGENAME", "lostDiscs");
+    require 'mydb.php';
+    //define("PAGENAME", "lostDiscs");
     
 ?>
     <link rel="stylesheet" href="CSS/mystyle2.css">
