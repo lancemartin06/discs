@@ -2,7 +2,7 @@
 <?php   
     //require_once("header.php");
     session_start();
-    require 'mydb.php';
+    require_once("../mydb.php");
     //define("PAGENAME", "lostDiscs");
     
 ?>
