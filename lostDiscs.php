@@ -1,9 +1,10 @@
 
 <?php   
     session_start();
-    require_once("header.php");
-    require_once("Dao.php");
     define("PAGENAME", "lostDiscs");
+    require_once("header.php");
+    include("dao.php");
+   
     
 ?>
     <link rel="stylesheet" href="CSS/mystyle2.css">
@@ -19,10 +20,7 @@
         }
     ?>
     <title>Lost Discs</title>
-        <section class="sec1">
-            
-            
-            
+    <section class="sec1">
     <div class="form">
       
       <ul class="tab-group">
