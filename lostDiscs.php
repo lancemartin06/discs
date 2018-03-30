@@ -1,7 +1,7 @@
 <?php   
     session_start();
     define("PAGENAME", "lostDiscs");
-    require_once("header.php");
+    require_once'header.php';
     //include("dao.php");
 $servername = "us-cdbr-iron-east-05.cleardb.net";
 $dbname = "heroku_460fd0693927d5a";
@@ -33,6 +33,7 @@ catch(PDOException $e)
             elseif (isset($_POST['signup'])){
                 echo("Trying to do signup...");
                     include 'Login/signup.php';
+                echo"did it work?";
             }
         }
     ?>
