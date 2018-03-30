@@ -13,7 +13,7 @@ $email = $_POST['email'];
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $password = $_POST['password'];
-echo("I'm over here or whatever");
+echo($conn);
       
 // Check if user with that email already exists
 $result = $conn->query("SELECT * FROM user WHERE email='butt@butt.com'");
