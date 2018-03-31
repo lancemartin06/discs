@@ -3,7 +3,7 @@ session_start();
 define("PAGENAME", "lostDiscs");
 require_once'header.php';
 try {
-    require_once'.../dao.php';
+    require_once('dao.php');
     $dao = new Dao();
 } catch (Exception $e) {
     echo 'Caught exception: ',  $e->getMessage(), "\n";
