@@ -2,7 +2,8 @@
 session_start();
 define("PAGENAME", "lostDiscs");
 require_once'header.php';
-$dao = new Dao();
+include 'Dao.php';
+//$dao = new Dao();
 ?>
 
 <link rel="stylesheet" href="CSS/mystyle2.css">
