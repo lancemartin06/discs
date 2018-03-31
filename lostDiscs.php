@@ -3,7 +3,7 @@ session_start();
 define("PAGENAME", "lostDiscs");
 require_once'header.php';
 require_once 'dao.php';
-$dao = new DAO();
+$dao = new Dao();
 ?>
     <title>Lost Discs</title>
 

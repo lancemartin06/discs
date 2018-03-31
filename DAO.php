@@ -7,11 +7,11 @@ class Dao {
     private $password = "0a186730";
 
 public function getConnection() {
-    try {
-        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        echo "Good Connection!";
-    }
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Good Connection!";
+}
     catch (PDOException $e) {
         echo "Connection failed: " . $e->getMessage();
     }
