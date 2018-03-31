@@ -25,7 +25,7 @@ class dao
 
     public function addUser($email, $pass, $name, $phone)
     {
-        echo('Im in the add user');
+
         $conn =$this->getConnection();
         
         $result = $conn->query("SELECT * FROM user WHERE email='$email'");
@@ -34,7 +34,7 @@ class dao
         if ($result > 0) {
         echo('User with this email already exists!');
         } else {
-            $sql = "INSERT INTO user (email, password, name, phone) VALUES ('$email','$password','$name','$phone')";
+            $sql = "INSERT INTO user (email, password, name, phone) VALUES ('$email','$pass','$name','$phone')";
             if ($conn->query($sql)) {
                 echo "You're All Signed Up!";
             } else {
