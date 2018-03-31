@@ -13,14 +13,14 @@ class Dao
 
     public function getConnection()
     {
-        echo("getting connection!");
-        return new PDO("mysql:host={$this->servername};dbname={$this->dbname}", $this->username, $this->password);
+        echo("/n getting connection!");
+        $conn = new PDO("mysql:host={$this->servername};dbname={$this->dbname}", $this->username, $this->password);
+        return $conn;
     }
     
     public function addUser($email, $pass, $name, $phone)
     {
-        
-        $conn = getConnection();
+        $conn = this->getConnection();
         
         $result = $conn->query("SELECT * FROM user WHERE email='$email'");
 
@@ -58,6 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     } elseif (isset($_POST['signup'])) {
         echo("Trying to add user: " . $_POST['email'] . "  " . $_POST['name']);
         $dao->addUser($_POST['email'], $_POST['password'], $_POST['name'], $_POST['phone']);
+        
     }
 }
 ?>
