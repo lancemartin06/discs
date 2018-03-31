@@ -2,10 +2,12 @@
 session_start();
 define("PAGENAME", "lostDiscs");
 require_once'header.php';
-require_once "Dao.php";
+
+require_once 'Dao.php';
 $dao = new Dao();
 ?>
-    <title>Lost Discs</title>
+
+<title>Lost Discs</title>
 
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
@@ -14,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
             $dao->getUser($_POST['email'], $_POST['password']);
     } elseif (isset($_POST['signup'])) {
         echo "I'm doing it peter. Sign-up deal.";
-           // $dao->addUser($_POST['email'], $_POST['password'], $_POST['name'], $_POST['phone']);
+           $dao->addUser($_POST['email'], $_POST['password'], $_POST['name'], $_POST['phone']);
     }
 }
 ?>
