@@ -37,6 +37,12 @@ class dao
         } else {
             $sql = "INSERT INTO user (email, password, name, phone) VALUES ('$email', '$pass', '$name', '$phone')";
             $conn->exec($sql);
+            $result = $conn->exec("SELECT * FROM user WHERE email='$email'");
+            if ($result > 0) {
+                echo('Success!');
+            } else {
+                echo("It didn't go through.");
+            }
            /* if ($conn->query($sql)) {
                 echo "You're All Signed Up!";
             } else {
