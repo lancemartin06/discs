@@ -11,9 +11,10 @@ $dao = new Dao();
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
     if (isset($_POST['login'])) {
-            $dao->getUser($_POST['email'], $_POST['password']);
+            //$dao->getUser($_POST['email'], $_POST['password']);
     } elseif (isset($_POST['signup'])) {
-            $dao->addUser($_POST['email'], $_POST['password'], $_POST['name'], $_POST['phone']);
+        echo "I'm doing it peter. Sign-up deal.";
+           // $dao->addUser($_POST['email'], $_POST['password'], $_POST['name'], $_POST['phone']);
     }
 }
 ?>
