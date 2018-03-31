@@ -13,7 +13,7 @@ class Dao
 
     public function getConnection()
     {
-        echo "getting connection!";
+        echo("getting connection!");
         return new PDO("mysql:host={$this->servername};dbname={$this->dbname}", $this->username, $this->password);
     }
     
@@ -41,10 +41,6 @@ class Dao
 
     }
 }
-
-
-
-
 $dao = new Dao();
 require_once'header.php';
 
