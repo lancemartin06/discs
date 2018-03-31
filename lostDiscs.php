@@ -2,9 +2,6 @@
 session_start();
 define("PAGENAME", "lostDiscs");
 require_once'header.php';
-include 'Dao.php';
-
-$dao = new Dao();
 ?>
 
 <link rel="stylesheet" href="CSS/mystyle2.css">
@@ -12,7 +9,9 @@ $dao = new Dao();
 
 
     <section class="sec1">
-<?php /*
+<?php
+include 'Dao.php';
+$dao = new Dao();
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
     if (isset($_POST['login'])) {
@@ -20,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     } elseif (isset($_POST['signup'])) {
         $dao->addUser($_POST['email'], $_POST['password'], $_POST['name'], $_POST['phone']);
     }
-}*/
+}
 ?>
     <div class="form">
       
