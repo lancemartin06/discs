@@ -2,35 +2,25 @@
 session_start();
 define("PAGENAME", "lostDiscs");
 require_once'header.php';
-//include("dao.php");
-$servername = "us-cdbr-iron-east-05.cleardb.net";
-$dbname = "heroku_460fd0693927d5a";
-$username = "bcc29ebdb3e631";
-$password = "0a186730";
-
-try {
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    // set the PDO error mode to exception
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Connected successfully";
-    echo $conn->query("SELECT * FROM user WHERE email='butt.com'");
-} catch (PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
-}
-   
-    
-?>
-    <link rel="stylesheet" href="CSS/mystyle2.css">
-    <?php
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        if (isset($_POST['login'])) {
-            include 'Login/login.php';
-        } elseif (isset($_POST['signup'])) {
-                    include 'Login/signup.php';
-        }
-    }
+require_once 'dao.php';
+$dao = new DAO();
 ?>
     <title>Lost Discs</title>
+
+    <?php 
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') 
+    {
+        if (isset($_POST['login'])) { //user logging in
+            dao->getUser($_POST['email'], $_POST['password']);
+        }
+
+        elseif (isset($_POST['signup'])) { //user registering
+
+            dao->addUser($_POST['email'], $_POST['password'], $_POST['name'], $_POST['phone']);
+
+        }
+    }
+    ?>
     <section class="sec1">
     <div class="form">
       

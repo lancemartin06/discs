@@ -2,7 +2,6 @@
 /* Registration process, inserts user info into the database 
    and sends account confirmation email message
  */
-echo("I'm here in signup. Let's see if i work?");
 // Set session variables to be used on profile.php page
 $_SESSION['email'] = $_POST['email'];
 $_SESSION['name'] = $_POST['name'];
@@ -13,10 +12,9 @@ $email = $_POST['email'];
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $password = $_POST['password'];
-echo($conn);
 echo "At first query.";
 // Check if user with that email already exists
-$result = $conn->query("SELECT * FROM user WHERE email='butt@butt.com'");
+$result = $conn->query("SELECT * FROM user WHERE email='$email'");
 echo($result);
 
 // We know user email exists if the rows returned are more than 0
