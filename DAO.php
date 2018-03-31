@@ -8,7 +8,8 @@ class Dao {
 public function getConnection() {
     echo "getting connection!";
     return new PDO("mysql:host=$this->servername;dbname=$this->dbname", $this->username, $this->password);
-}
+    }
+    
     public function addUser($email, $pass, $name, $phone) {
         
         $conn = getConnection();
@@ -32,4 +33,3 @@ public function getConnection() {
 
     }
 }
-?>
