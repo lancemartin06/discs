@@ -1,9 +1,9 @@
 <?php
 session_start();
-define("PAGENAME", "lostDiscs");
+//define("PAGENAME", "lostDiscs");
 require_once'header.php';
-require_once'Dao.php';
-//$dao = new Dao();
+require_once'dao.php';
+$dao = new Dao();
 ?>
 
 <link rel="stylesheet" href="CSS/mystyle2.css">
