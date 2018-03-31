@@ -2,16 +2,16 @@
 session_start();
 define("PAGENAME", "lostDiscs");
 require_once'header.php';
+require_once'Dao.php';
+$dao = new Dao();
 ?>
 
 <link rel="stylesheet" href="CSS/mystyle2.css">
 <title>Lost Discs</title>
 
 
-    <section class="sec1">
+<section class="sec1">
 <?php
-include 'Dao.php';
-$dao = new Dao();
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
     if (isset($_POST['login'])) {
