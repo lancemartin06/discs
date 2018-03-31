@@ -11,7 +11,7 @@ class dao
     private $username = "bcc29ebdb3e631";
     private $password = "0a186730";
 
-    public function getConnection() {
+    function getConnection() {
         echo("Trying connection!");
         try {
         $dbh = new PDO("mysql:host=$this->servername;dbname=$this->dbname", $this->username, $this->password);
@@ -23,13 +23,16 @@ class dao
         }
     }
     
-    public function addUser($email, $pass, $name, $phone)
+    function addUser($email, $pass, $name, $phone)
     {
         echo('Im in the add user');
-        getUser();
+        try {
         $conn = getConnection();
-        
-        $result = $conn->query("SELECT * FROM user WHERE email='$email'");
+        } catch (Exception $e) {
+            print "Error!: " . $e->getMessage() . "<br/>";
+            die();
+        }
+        $result = $dbh->query("SELECT * FROM user WHERE email='$email'");
 
         // If the result is greater than 0 than the user already exists. 
         if ($result > 0) {
@@ -44,7 +47,7 @@ class dao
         }
     }
     
-    public function getUser() {
+    function getUser() {
         echo("hey! I'm in the get user!");
     }
 }
