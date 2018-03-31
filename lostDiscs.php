@@ -27,7 +27,7 @@ class dao
     {
 
         $conn =$this->getConnection();
-
+        echo("I have the Connection");
         try {
                 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 $testUser = $conn->exec("SELECT * FROM user WHERE email='$email'");
