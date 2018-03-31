@@ -20,6 +20,7 @@ class dao
     
     public function addUser($email, $pass, $name, $phone)
     {
+        echo('Im in the add user');
         $conn = getConnection();
         
         $result = $conn->query("SELECT * FROM user WHERE email='$email'");
