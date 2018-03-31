@@ -26,6 +26,7 @@ class dao
     public function addUser($email, $pass, $name, $phone)
     {
         echo('Im in the add user');
+        getUser();
         $conn = getConnection();
         
         $result = $conn->query("SELECT * FROM user WHERE email='$email'");
@@ -43,8 +44,8 @@ class dao
         }
     }
     
-    public function getUser($email, $pass) {
-
+    public function getUser() {
+        echo("hey! I'm in the get user!");
     }
 }
 $dao = new dao();
