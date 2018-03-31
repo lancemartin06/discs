@@ -13,9 +13,8 @@ class dao
     private $password = "0a186730";
 
     public function getConnection() {
-        echo("Trying connection!");
         try {
-        $dbh = new PDO("mysql:host=$this->servername;dbname=$this->dbname", $this->username, $this->password);
+        $dbh = new PDO("mysql:host={$this->servername};dbname={$this->dbname}", $this->username, $this->password);
 
         return $dbh;
         } catch (PDOException $e) {
@@ -39,7 +38,7 @@ class dao
                 // prepare sql and bind parameters
                 $stmt = $conn->prepare("INSERT INTO user (email, password, name, phone) VALUES (:email, :password, :name, :phone)");
                 $stmt->bindParam(':email', $email);
-                $stmt->bindParam(':password', $password);
+                $stmt->bindParam(':password', $pass);
                 $stmt->bindParam(':name', $name);
                 $stmt->bindParam(':phone', $phone);
 
