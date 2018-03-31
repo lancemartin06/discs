@@ -4,7 +4,7 @@ define("PAGENAME", "lostDiscs");
 //require('dao.php');
 
 
-class Dao 
+class dao 
 {
     private $servername = "us-cdbr-iron-east-05.cleardb.net";
     private $dbname = "heroku_460fd0693927d5a";
@@ -20,7 +20,7 @@ class Dao
     
     public function addUser($email, $pass, $name, $phone)
     {
-        $conn = this->getConnection();
+        $conn = getConnection();
         
         $result = $conn->query("SELECT * FROM user WHERE email='$email'");
 
@@ -41,7 +41,7 @@ class Dao
 
     }
 }
-$dao = new Dao();
+$dao = new dao();
 require_once'header.php';
 
 ?>
