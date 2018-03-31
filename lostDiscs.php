@@ -1,12 +1,8 @@
 <?php
-session_start();
 define("PAGENAME", "lostDiscs");
-try {
-    require_once('dao.php');
-    $dao = new Dao();
-} catch (Exception $e) {
-    echo 'Caught exception: ',  $e->getMessage(), "\n";
-}
+require('dao.php');
+session_start();
+$dao = new Dao();
 require_once'header.php';
 
 ?>
@@ -20,9 +16,9 @@ require_once'header.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
     if (isset($_POST['login'])) {
-       $dao->getUser($_POST['email'], $_POST['password']);
+        $dao->getUser($_POST['email'], $_POST['password']);
     } elseif (isset($_POST['signup'])) {
-       $dao->addUser($_POST['email'], $_POST['password'], $_POST['name'], $_POST['phone']);
+        $dao->addUser($_POST['email'], $_POST['password'], $_POST['name'], $_POST['phone']);
     }
 }
 ?>
