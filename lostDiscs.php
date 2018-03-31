@@ -28,26 +28,28 @@ class dao
     {
 
         $conn =$this->getConnection();
-        
-        $result = $conn->exec("SELECT * FROM user WHERE email='$email'");
-        echo("\n This is the result of the query: " . $result);
-        // If the result is greater than 0 than the user already exists. 
-        if ($result > 0) {
-            echo('User with this email already exists!');
-        } else {
-            $sql = "INSERT INTO user (email, password, name, phone) VALUES ('$email', '$pass', '$name', '$phone')";
-            $conn->exec($sql);
-            $result = $conn->exec("SELECT * FROM user WHERE email='$email'");
-            if ($result > 0) {
-                echo('Success!');
-            } else {
-                echo("It didn't go through.");
+
+        try {
+                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                $testUser = $conn->exec("SELECT * FROM user WHERE email='$email'");
+                if ($testUser > 0)
+                {
+                  throw new Exception("Email is already in use");
+                }
+                // prepare sql and bind parameters
+                $stmt = $conn->prepare("INSERT INTO user (email, password, name, phone) VALUES (:email, :password, :name, :phone)");
+                $stmt->bindParam(':email', $email);
+                $stmt->bindParam(':password', $password);
+                $stmt->bindParam(':name', $name);
+                $stmt->bindParam(':phone', $phone);
+
+                $stmt->execute();
+
+                echo "New record created successfully";
             }
-           /* if ($conn->query($sql)) {
-                echo "You're All Signed Up!";
-            } else {
-                echo "Oh no. Something Went Wrong.";
-            } */
+        catch(PDOException $e)
+        {
+        echo "Error: " . $e->getMessage();
         }
     }
     
