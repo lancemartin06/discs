@@ -35,8 +35,8 @@ class dao
         if ($result > 0) {
             echo('User with this email already exists!');
         } else {
-            $sql = "INSERT INTO user (email, password, name, phone) VALUES ('$email','$pass','$name','$phone')";
-            if ($conn->query($sql)) {
+            $sql = "INSERT INTO user (email, password, name, phone) VALUES ('$email', '$pass', '$name', '$phone')";
+            if ($conn->query($sql)=== TRUE) {
                 echo "You're All Signed Up!";
             } else {
                 echo "Oh no. Something Went Wrong.";
