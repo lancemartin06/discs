@@ -1,21 +1,13 @@
 <?php
 class Dao {
-
     private $servername = "us-cdbr-iron-east-05.cleardb.net";
     private $dbname = "heroku_460fd0693927d5a";
     private $username = "bcc29ebdb3e631";
     private $password = "0a186730";
 
 public function getConnection() {
-try {
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Good Connection!";
-}
-    catch (PDOException $e) {
-        echo "Connection failed: " . $e->getMessage();
-    }
-    return $conn;
+
+    return new PDO("mysql:host={$this->servername};dbname={$this->dbname}", $this->username, $this->password);
 }
    
     public function addUser($email, $pass, $name, $phone) {
