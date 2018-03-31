@@ -1,7 +1,7 @@
 <?php
 session_start();
 define("PAGENAME", "lostDiscs");
-//require('dao.php');
+require('dao.php');
 
 
 class dao 
@@ -11,7 +11,7 @@ class dao
     private $username = "bcc29ebdb3e631";
     private $password = "0a186730";
 
-    function getConnection() {
+    public function getConnection() {
         echo("Trying connection!");
         try {
         $dbh = new PDO("mysql:host=$this->servername;dbname=$this->dbname", $this->username, $this->password);
@@ -22,17 +22,13 @@ class dao
             die();
         }
     }
-    
-    function addUser($email, $pass, $name, $phone)
+
+    public function addUser($email, $pass, $name, $phone)
     {
         echo('Im in the add user');
-        try {
-        $conn = getConnection();
-        } catch (Exception $e) {
-            print "Error!: " . $e->getMessage() . "<br/>";
-            die();
-        }
-        $result = $dbh->query("SELECT * FROM user WHERE email='$email'");
+        $conn =$this->getConnection();
+        
+        $result = $conn->query("SELECT * FROM user WHERE email='$email'");
 
         // If the result is greater than 0 than the user already exists. 
         if ($result > 0) {
