@@ -12,9 +12,15 @@ class dao
     private $password = "0a186730";
 
     public function getConnection() {
-        echo("     getting connection!");
-        $conn = new PDO("mysql:host={$this->servername};dbname={$this->dbname}", $this->username, $this->password);
-        return $conn;
+        echo("Trying connection!");
+        try {
+        $dbh = new PDO("mysql:host=$this->servername;dbname=$this->dbname", $this->username, $this->password);
+
+        return $dbh;
+        } catch (PDOException $e) {
+            print "Error!: " . $e->getMessage() . "<br/>";
+            die();
+        }
     }
     
     public function addUser($email, $pass, $name, $phone)
