@@ -1,13 +1,14 @@
 <?php
 session_start();
 define("PAGENAME", "lostDiscs");
-require_once'header.php';
 try {
     require_once('dao.php');
     $dao = new Dao();
 } catch (Exception $e) {
     echo 'Caught exception: ',  $e->getMessage(), "\n";
 }
+require_once'header.php';
+
 ?>
 
 <link rel="stylesheet" href="CSS/mystyle2.css">
