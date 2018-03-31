@@ -7,10 +7,10 @@ class Dao {
 
 public function getConnection() {
 
-    return new PDO("mysql:host={$this->servername};dbname={$this->dbname}", $this->username, $this->password);
+    return new PDO("mysql:host=$this->servername;dbname=$this->dbname", $this->username, $this->password);
 }
-   
     public function addUser($email, $pass, $name, $phone) {
+        
         $conn = getConnection();
         
         $result = $conn->query("SELECT * FROM user WHERE email='$email'");
@@ -28,7 +28,7 @@ public function getConnection() {
         }
     }
     
-    public function getUser($email, $pass){
+    public function getUser($email, $pass) {
 
     }
 }
