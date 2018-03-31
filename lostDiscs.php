@@ -29,11 +29,11 @@ class dao
 
         $conn =$this->getConnection();
         
-        $result = $conn->query("SELECT * FROM user WHERE email='$email'");
-
+        $result = $conn->exec("SELECT * FROM user WHERE email='$email'");
+        echo("\n This is the result of the query: " . $result);
         // If the result is greater than 0 than the user already exists. 
         if ($result > 0) {
-        echo('User with this email already exists!');
+            echo('User with this email already exists!');
         } else {
             $sql = "INSERT INTO user (email, password, name, phone) VALUES ('$email','$pass','$name','$phone')";
             if ($conn->query($sql)) {
