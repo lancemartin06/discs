@@ -36,11 +36,12 @@ class dao
             echo('User with this email already exists!');
         } else {
             $sql = "INSERT INTO user (email, password, name, phone) VALUES ('$email', '$pass', '$name', '$phone')";
-            if ($conn->query($sql)=== TRUE) {
+            $conn->exec($sql);
+           /* if ($conn->query($sql)) {
                 echo "You're All Signed Up!";
             } else {
                 echo "Oh no. Something Went Wrong.";
-            }
+            } */
         }
     }
     
