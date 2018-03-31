@@ -7,20 +7,16 @@ $dao = new DAO();
 ?>
     <title>Lost Discs</title>
 
-    <?php 
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') 
-    {
-        if (isset($_POST['login'])) { //user logging in
-            dao->getUser($_POST['email'], $_POST['password']);
-        }
-
-        elseif (isset($_POST['signup'])) { //user registering
-
-            dao->addUser($_POST['email'], $_POST['password'], $_POST['name'], $_POST['phone']);
-
-        }
+<?php
+if ($_SERVER['REQUEST_METHOD'] == 'POST')
+{
+    if (isset($_POST['login'])) {
+            $dao->getUser($_POST['email'], $_POST['password']);
+    } elseif (isset($_POST['signup'])) {
+            $dao->addUser($_POST['email'], $_POST['password'], $_POST['name'], $_POST['phone']);
     }
-    ?>
+}
+?>
     <section class="sec1">
     <div class="form">
       
