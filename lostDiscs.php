@@ -49,18 +49,21 @@ require_once'header.php';
 <link rel="stylesheet" href="CSS/mystyle2.css">
 <title>Lost Discs</title>
 
-
-<section class="sec1">
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
     if (isset($_POST['login'])) {
+        echo("I'm loggin in?");
         $dao->getUser($_POST['email'], $_POST['password']);
     } elseif (isset($_POST['signup'])) {
+        echo("Trying to add user: " . $_POST['email'] . "  " . $_POST['name']);
         $dao->addUser($_POST['email'], $_POST['password'], $_POST['name'], $_POST['phone']);
     }
 }
 ?>
+
+<section class="sec1">
+
     <div class="form">
       
       <ul class="tab-group">
