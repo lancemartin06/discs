@@ -11,9 +11,8 @@ class dao
     private $username = "bcc29ebdb3e631";
     private $password = "0a186730";
 
-    public function getConnection()
-    {
-        echo("/n getting connection!");
+    public function getConnection() {
+        echo("     getting connection!");
         $conn = new PDO("mysql:host={$this->servername};dbname={$this->dbname}", $this->username, $this->password);
         return $conn;
     }
