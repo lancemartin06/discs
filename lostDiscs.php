@@ -1,7 +1,8 @@
 <?php
 session_start();
 define("PAGENAME", "lostDiscs");
-require('dao.php');
+
+//require('dao.php');
 
 
 class dao 
