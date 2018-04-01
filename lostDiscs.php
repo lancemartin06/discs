@@ -29,15 +29,16 @@ class dao
         $conn =$this->getConnection();
         try {
                 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                $conn->setAttribute(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY, truw);
 
                 $testUser = $conn->exec("SELECT * FROM user WHERE email='$email'");
-                if ($testUser > 0)
+                $testUser->closeCursor();
+
+            if ($testUser > 0)
                 {
                   throw new Exception("Email is already in use");
                 }
                 // prepare sql and bind parameters
-                $stmt = $conn->prepare("INSERT INTO user (email, password, name, phone) VALUES (:email, :password, :name, :phone)");
+                $stmt = $conn->prepare("INSERT INTO user (email, password, name, phone) VALUES (:email, :password, :name, :phone)", array(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => false));
                 $stmt->bindParam(':email', $email);
                 $stmt->bindParam(':password', $pass);
                 $stmt->bindParam(':name', $name);
