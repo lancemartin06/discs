@@ -29,7 +29,7 @@ class dao
         $conn =$this->getConnection();
         try {
                 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                $conn->setAttribute(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY, false);
+                $conn->setAttribute(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY, truw);
 
                 $testUser = $conn->exec("SELECT * FROM user WHERE email='$email'");
                 if ($testUser > 0)
