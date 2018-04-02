@@ -46,10 +46,11 @@ class dao
     }
     public function addUser($email, $pass, $name, $phone)
     {
-        echo("testing User! \n");
+        echo("testing User! ");
         $testUser = $this->confirmUser($email);
-
+        echo(" tested user");
         $conn =$this->getConnection();
+        echo(" Got second connection");
         try {
                 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
