@@ -24,13 +24,14 @@ class dao
     }
     public function confirmUser($email)
     {
-        echo("In confirmUser\n");
+        echo("In confirmUser");
         $conn =$this->getConnection();
-
+        echo(" Got Connection");
         //$testUser = $conn->exec("SELECT * FROM user WHERE email='$email'");
         //$conn->query("SELECT * FROM user WHERE email='$email'");
 
         $stmt = $conn->prepare("SELECT * FROM user WHERE user.email=':email'", array(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true));
+        echo(" preparing to exectute stmt");
         $stmt->bindParam(':email', $email);
         $testUser = $conn->exec($stmt);
         $stmt->closeCursor();
