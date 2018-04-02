@@ -66,9 +66,13 @@ class dao
                 $stmt->bindParam(':name', $name);
                 $stmt->bindParam(':phone', $phone);
 
-                $stmt->execute();
-                $stmt->closeCursor();
-                echo "New record created successfully";
+                if($stmt->execute())
+                {
+                    echo("New record created successfully");
+                }
+                else{
+                    echo(" Failure to create account");
+                }
                 $conn = null;
             }
         catch(PDOException $e)
