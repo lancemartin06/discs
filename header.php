@@ -1,6 +1,4 @@
-<?php
-require_once('dao.php');
-?>
+
 
 <html>
     <head>
@@ -21,5 +19,7 @@ require_once('dao.php');
                 <li><a <?php if(PAGENAME == "logout"){ echo " class =\"active\" ";} ?> href="../Login/logout.php">Logout</a></li>
             </ul>
         </nav>
-        
-    
+
+<?php
+require_once('dao.php');
+?>
