@@ -60,7 +60,7 @@ class dao
                   throw new Exception("Email is already in use");
                 }
                 // prepare sql and bind parameters
-                $stmt = $conn->prepare("INSERT INTO user (email, password, name, phone) VALUES (:email, :password, :name, :phone)", array(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true));
+                $stmt = $conn->prepare("INSERT INTO user (email, password, name, phone) VALUES (:email, :password, :name, :phone)");
                 $stmt->bindParam(':email', $email);
                 $stmt->bindParam(':password', $pass);
                 $stmt->bindParam(':name', $name);
