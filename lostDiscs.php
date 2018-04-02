@@ -27,8 +27,14 @@ class dao
         echo("In confirmUser\n");
         $conn =$this->getConnection();
 
-        $testUser = $conn->exec("SELECT * FROM user WHERE email='$email'");
+        //$testUser = $conn->exec("SELECT * FROM user WHERE email='$email'");
+        //$conn->query("SELECT * FROM user WHERE email='$email'");
 
+        $stmt = $conn->prepare("SELECT * FROM user WHERE user.email=':email'", array(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true));
+        $stmt->bindParam(':email', $email);
+        $testUser = $conn->exec($stmt);
+        $stmt->closeCursor();
+        $conn = null;
         if($testUser > 0) {
             return 1;
         }
@@ -39,12 +45,13 @@ class dao
     }
     public function addUser($email, $pass, $name, $phone)
     {
+        echo("testing User! \n");
+        $testUser = confirmUser($email);
 
         $conn =$this->getConnection();
         try {
                 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                echo("testing User! \n");
-                $testUser = confirmUser($email);
+
             if ($testUser == 0)
                 {
                   throw new Exception("Email is already in use");
@@ -59,6 +66,7 @@ class dao
                 $stmt->execute();
 
                 echo "New record created successfully";
+                $conn = null;
             }
         catch(PDOException $e)
         {
