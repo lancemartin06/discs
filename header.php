@@ -21,5 +21,5 @@
         </nav>
 
 <?php
-require('dao.php');
+require('./dao.php');
 ?>
