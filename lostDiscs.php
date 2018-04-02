@@ -22,10 +22,11 @@ class dao
             die();
         }
     }
-    public function confirmUser($email, $conn)
+    public function confirmUser($email)
     {
-        //$conn =$this->getConnection();
         echo("In confirmUser\n");
+        $conn =$this->getConnection();
+
         $testUser = $conn->exec("SELECT * FROM user WHERE email='$email'");
 
         if($testUser > 0) {
@@ -43,8 +44,7 @@ class dao
         try {
                 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 echo("testing User! \n");
-                $testUser = confirmUser($email, $conn);
-                echo($testUser . "\n");
+                $testUser = confirmUser($email);
             if ($testUser == 0)
                 {
                   throw new Exception("Email is already in use");
