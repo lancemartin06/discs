@@ -51,6 +51,7 @@ class dao
         echo(" tested user");
         $conn =$this->getConnection();
         echo(" Got second connection");
+        echo (" testUser = " . $testUser);
         try {
                 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
