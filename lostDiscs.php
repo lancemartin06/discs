@@ -57,7 +57,7 @@ class dao
 
             if ($testUser != 0)
                 {
-                    $_SESSION['message'] = "Email is already in use!"
+                    $_SESSION['message'] = "Email is already in use!";
                 }
                 // prepare sql and bind parameters
                 $stmt = $conn->prepare("INSERT INTO user (email, password, name, phone) VALUES (:email, :password, :name, :phone)");
