@@ -67,7 +67,7 @@ class dao
                 $stmt->bindParam(':phone', $phone);
 
                 $stmt->execute();
-
+                $stmt->closeCursor();
                 echo "New record created successfully";
                 $conn = null;
             }
