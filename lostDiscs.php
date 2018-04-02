@@ -2,7 +2,7 @@
 session_start();
 define("PAGENAME", "lostDiscs");
 
-require_once'header.php';
+require('header.php');
 
 $dao = new dao();
 ?>
