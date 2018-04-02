@@ -57,7 +57,7 @@ class dao
 
             if ($testUser != 0)
                 {
-                  throw new Exception("Email is already in use");
+                    $_SESSION['message'] = "Email is already in use!"
                 }
                 // prepare sql and bind parameters
                 $stmt = $conn->prepare("INSERT INTO user (email, password, name, phone) VALUES (:email, :password, :name, :phone)");
@@ -81,10 +81,47 @@ class dao
         }
     }
     
-    function getUser() {
-        echo("hey! I'm in the get user!");
+    function getUser($email, $pass) {
+        $testUser = $this->confirmUser($email);
+        echo(" tested user");
+        $conn =$this->getConnection();
+        echo(" Got second connection");
+        echo (" testUser = " . $testUser);
+        try {
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+            if ($testUser = 0)
+            {
+               return $_SESSION['message'] = "Email is invalid :( You should sign up!";
+            }
+            // prepare sql and bind parameters
+            $stmt = $conn->prepare("SELECT * FROM user WHERE user.email=':email' AND user.password=':password'", array(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true));
+            echo(" preparing to exectute stmt");
+            $stmt->bindParam(':email', $email);
+            $stmt->bindParam(':password', $pass);
+
+            if($stmt->execute())
+            {
+                $user = $stmt->fetch(PDO::FETCH_ASSOC);
+                $stmt->closeCursor();
+                $_SESSION['email'] = $user['email'];
+                $_SESSION['password'] = $user['password'];
+                $_SESSION['name'] = $user['name'];
+                $_SESSION['phone'] = $user['phone'];
+                $_SESSION['message'] = "Login Successful!";
+            }
+            else{
+                $_SESSION['message'] = "Login Failed";
+            }
+            $conn = null;
+        }
+        catch(PDOException $e)
+        {
+            echo "Error: " . $e->getMessage();
+        }
     }
 }
+
 $dao = new dao();
 require_once'header.php';
 
@@ -97,11 +134,11 @@ require_once'header.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
     if (isset($_POST['login'])) {
-        echo("I'm loggin in?");
         $dao->getUser($_POST['email'], $_POST['password']);
+        echo($_SESSION['message']);
     } elseif (isset($_POST['signup'])) {
-        echo("Trying to add user: " . $_POST['email'] . "  " . $_POST['name']);
         $dao->addUser($_POST['email'], $_POST['password'], $_POST['name'], $_POST['phone']);
+        echo($_SESSION['message']);
         
     }
 }
