@@ -22,9 +22,9 @@ class dao
             die();
         }
     }
-    public function confirmUser($email)
+    public function confirmUser($email, $conn)
     {
-        $conn =$this->getConnection();
+        //$conn =$this->getConnection();
         echo("In confirmUser\n");
         $testUser = $conn->exec("SELECT * FROM user WHERE email='$email'");
 
@@ -43,7 +43,7 @@ class dao
         try {
                 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 echo("testing User! \n");
-                $testUser = confirmUser($email);
+                $testUser = confirmUser($email, $conn);
                 echo($testUser . "\n");
             if ($testUser == 0)
                 {
