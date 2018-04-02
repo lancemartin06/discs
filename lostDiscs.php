@@ -46,7 +46,7 @@ class dao
     public function addUser($email, $pass, $name, $phone)
     {
         echo("testing User! \n");
-        $testUser = confirmUser($email);
+        $testUser = $this->confirmUser($email);
 
         $conn =$this->getConnection();
         try {
