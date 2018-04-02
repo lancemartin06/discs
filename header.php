@@ -1,3 +1,7 @@
+<?php
+require_once('dao.php');
+?>
+
 <html>
     <head>
         <link rel="stylesheet" href="CSS/mystyle.css">
