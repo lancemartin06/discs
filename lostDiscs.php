@@ -55,7 +55,7 @@ class dao
         try {
                 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            if ($testUser == 0)
+            if ($testUser != 0)
                 {
                   throw new Exception("Email is already in use");
                 }
