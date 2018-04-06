@@ -96,6 +96,7 @@ class dao
                 $_SESSION['name'] = $user['name'];
                 $_SESSION['phone'] = $user['phone'];
                 $_SESSION['message'] = "Login Successful!";
+                $_SESSION['logged_in'] = true;
             }
             else{
                 $_SESSION['message'] = "Login Failed";

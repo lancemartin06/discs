@@ -1,18 +1,18 @@
 <?php
 /* Displays user information and some useful messages */
 session_start();
+require_once 'header.php';
 
 // Check if user is logged in using the session variable
-if ( $_SESSION['logged_in'] != 1 ) {
+if ( $_SESSION['logged_in'] != true ) {
   $_SESSION['message'] = "You must log in before viewing your profile page!";
-  header("location: error.php");    
+
 }
 else {
     // Makes it easier to read
-    $first_name = $_SESSION['first_name'];
+    $first_name = $_SESSION['name'];
     $last_name = $_SESSION['last_name'];
     $email = $_SESSION['email'];
-    $active = $_SESSION['active'];
 }
 ?>
 <!DOCTYPE html>

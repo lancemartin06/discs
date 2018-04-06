@@ -16,9 +16,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     if (isset($_POST['login'])) {
         $dao->getUser($_POST['email'], $_POST['password']);
         echo($_SESSION['message']);
+        if($_SESSION['logged_in'] = true){
+            header('Login/success.php');
+        }
     } elseif (isset($_POST['signup'])) {
         $dao->addUser($_POST['email'], $_POST['password'], $_POST['name'], $_POST['phone']);
         echo($_SESSION['message']);
+        $_POST['signup'] = null;
         
     }
 }
@@ -54,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
             <input type="password" required autocomplete="off" name="password"/>
           </div>
           
-          <p class="forgot"><a href="../Login/forgot.php">Forgot Password?</a></p>
+          <p class="forgot"><a href="../Login/forgot.php">NA</a></p>
           
           <button class="button button-block" name="login" />Log In</button>
           

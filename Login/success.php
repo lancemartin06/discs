@@ -1,13 +1,9 @@
 <?php
 /* Displays all successful messages */
 session_start();
+include_once 'header.php'
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Success</title>
-</head>
-<body>
+
 <div class="form">
     <h1><?= 'Success'; ?></h1>
     <p>
@@ -21,5 +17,4 @@ session_start();
     </p>
     <a href="../home.html"><button class="button button-block"/>Home</button></a>
 </div>
-</body>
-</html>
+<?php require_once("footer.php");
