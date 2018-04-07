@@ -2,6 +2,7 @@
 /* Log out process, unsets and destroys session variables */
 session_start();
 define("PAGENAME", "logout");
+session_destroy();
 require_once("header.php"); 
 ?>
     <title>Logout</title>

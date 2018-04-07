@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bba63ec-41cd-4e0d-bf5e-55226576ba4e" name="Default" comment="Update">
-      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lostDiscs.php" beforeDir="false" afterPath="$PROJECT_DIR$/lostDiscs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,7 +16,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="lostDiscs.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="lostDiscs.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lostDiscs.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="364">
@@ -26,11 +25,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="logout.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="logout.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/logout.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="60">
+              <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -95,6 +94,7 @@
         <option value="$PROJECT_DIR$/profile.php" />
         <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/lostDiscs.php" />
+        <option value="$PROJECT_DIR$/logout.php" />
       </list>
     </option>
   </component>
@@ -183,12 +183,12 @@
       <workItem from="1522527206653" duration="9599000" />
       <workItem from="1522698515762" duration="2600000" />
       <workItem from="1522708520790" duration="5527000" />
-      <workItem from="1523052441789" duration="11856000" />
+      <workItem from="1523052441789" duration="12007000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31391000" />
+    <option name="totallyTimeSpent" value="31542000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -208,8 +208,8 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32941177" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.19117647" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.72545457" visible="true" weight="0.16639742" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.19117647" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.72545457" visible="true" weight="0.16639742" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49921876" weight="0.32859176" />
@@ -433,17 +433,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lostDiscs.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
           <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
         </state>
       </provider>
     </entry>
