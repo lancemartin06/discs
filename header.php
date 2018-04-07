@@ -16,7 +16,9 @@
                 <li><a <?php if(PAGENAME == "courses"){ echo " class =\"active\" ";} ?> href="courses.php">Boise Courses</a></li>
                 <li><a <?php if(PAGENAME == "starting"){ echo " class =\"active\" ";} ?> href="starting.php">Get Started</a></li>
                 <li><a <?php if(PAGENAME == "lostDiscs"){ echo " class =\"active\" ";} ?> href="lostDiscs.php">Lost Discs</a></li>
-                <li><a <?php if(PAGENAME == "logout"){ echo " class =\"active\" ";} ?> href="logout.php">Logout</a></li>
+                <?php if(isset($_SESSION['logged_in']) && ($_SESSION['logged_in'] = true)){ echo("<li><a");} ?>
+                <?php if(PAGENAME == "logout" && isset($_SESSION['logged_in'])){ echo " class =\"active\" ";}?>
+                <?php if(isset($_SESSION['logged_in'])){ echo("href=\"logout.php\">Logout</a></li> ");} ?>
             </ul>
         </nav>
 
