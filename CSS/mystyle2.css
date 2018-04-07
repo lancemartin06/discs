@@ -7,8 +7,8 @@ html {
 }
 
 body {
-  background: #ffffff; /* #c1bdba */
-  font-family: 'Titillium Web', sans-serif;
+  background: #ffffff;
+  font-family: Quicksand;
 }
 
 a {
@@ -22,12 +22,12 @@ a:hover {
 }
 
 .form {
-  background: rgba(19, 35, 47, 0.9); 
+  background: rgba(6, 47, 14, 0.9);
   padding: 40px;
   max-width: 600px;
   margin: 40px auto;
   border-radius: 4px;
-  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+  box-shadow: 0 4px 10px 4px rgba(6, 47, 14, 0.9);
 }
 
 .tab-group {

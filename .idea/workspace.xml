@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bba63ec-41cd-4e0d-bf5e-55226576ba4e" name="Default" comment="Update">
+      <change beforePath="$PROJECT_DIR$/CSS/mystyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/mystyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSS/mystyle2.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/mystyle2.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,8 +38,8 @@
       <file leaf-file-name="mystyle2.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CSS/mystyle2.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="1" lean-forward="true" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+            <state relative-caret-position="150">
+              <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -88,6 +89,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="mystyle.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CSS/mystyle.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="154" column="27" lean-forward="true" selection-start-line="154" selection-start-column="4" selection-end-line="154" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -104,6 +114,7 @@
         <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/lostDiscs.php" />
         <option value="$PROJECT_DIR$/logout.php" />
+        <option value="$PROJECT_DIR$/CSS/mystyle.css" />
         <option value="$PROJECT_DIR$/CSS/mystyle2.css" />
       </list>
     </option>
@@ -198,12 +209,12 @@
       <workItem from="1522527206653" duration="9599000" />
       <workItem from="1522698515762" duration="2600000" />
       <workItem from="1522708520790" duration="5527000" />
-      <workItem from="1523052441789" duration="12427000" />
+      <workItem from="1523052441789" duration="12824000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31962000" />
+    <option name="totallyTimeSpent" value="32359000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -223,8 +234,8 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32941177" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.19117647" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.72545457" visible="true" weight="0.16639742" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.19117647" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.72545457" visible="true" weight="0.16639742" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49921876" weight="0.32859176" />
@@ -420,13 +431,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Login/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Login/success.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -438,13 +442,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
           <caret line="40" column="14" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="102" selection-start-line="20" selection-start-column="102" selection-end-line="20" selection-end-column="102" />
         </state>
       </provider>
     </entry>
@@ -462,10 +459,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="102" selection-start-line="20" selection-start-column="102" selection-end-line="20" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Login/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS/mystyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="154" column="27" lean-forward="true" selection-start-line="154" selection-start-column="4" selection-end-line="154" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CSS/mystyle2.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="1" lean-forward="true" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+        <state relative-caret-position="150">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
         </state>
       </provider>
     </entry>
