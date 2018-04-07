@@ -39,7 +39,6 @@ class dao
     {
         $testUser = $this->confirmUser($email);
         $conn =$this->getConnection();
-        echo (" testUser = " . $testUser);
         try {
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -83,7 +82,7 @@ class dao
                 return $_SESSION['message'] = "Email is invalid :( You should sign up!";
             }
             // prepare sql and bind parameters
-            $stmt = $conn->prepare("SELECT * FROM user WHERE user.email=':email' AND user.password=':password'", array(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true));
+            $stmt = $conn->prepare("SELECT * FROM user WHERE user.email=':email' AND user.password=':password'");
             $stmt->bindParam(':email', $email);
             $stmt->bindParam(':password', $pass);
 
@@ -100,6 +99,87 @@ class dao
             }
             else{
                 $_SESSION['message'] = "Login Failed";
+            }
+            $conn = null;
+        }
+        catch(PDOException $e)
+        {
+            echo "Error: " . $e->getMessage();
+        }
+    }
+
+    //This function is used to retrieve the user's discs from the database using either their name, email
+    //or phone number. Many of the discs in the database didn't have full names or phone numbers.
+    function getDiscs($name, $email, $phone){
+
+        $conn =$this->getConnection();
+        try {
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+            // prepare sql and bind parameters
+            $stmt = $conn->prepare("SELECT user_id FROM user (email, password) VALUES (:email, :password)");
+            $stmt->bindParam(':email', $email);
+            $stmt->bindParam(':password', $pass);
+
+
+
+            if($stmt->execute())
+            {
+                $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+                $stmt->closeCursor();
+
+                $stmt = $conn->prepare("UPDATE disc_inventory SET user_id (email, password) VALUES (:email, :password)");
+                $stmt->bindParam(':email', $email);
+                $stmt->bindParam(':password', $pass);
+
+            }
+            else{
+                echo("Error Occured While getting your discs.");
+            }
+            $conn = null;
+        }
+        catch(PDOException $e)
+        {
+            echo "Error: " . $e->getMessage();
+        }
+
+    }
+    function bindDiscs($name, $email, $phone){
+
+        $conn =$this->getConnection();
+        try {
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+            // prepare sql and bind parameters
+            $stmt = $conn->prepare("SELECT user_id FROM user (email, password) VALUES (:email, :password)");
+            $stmt->bindParam(':email', $email);
+            $stmt->bindParam(':password', $pass);
+
+
+
+            if($stmt->execute())
+            {
+                $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+                $stmt->closeCursor();
+
+                if(isset($result['user_id'])){
+                    $_SESSION['user_id'] = $result['user_id'];
+                }
+
+                $stmt = $conn->prepare("UPDATE disc_inventory SET user_id = :userId WHERE name = :name OR phone = :phone");
+                $stmt->bindParam(':userID', $_SESSION['user_id']);
+                $stmt->bindParam(':name', $name);
+                $stmt->bindParam(':phone', $phone);
+
+                if($stmt->execute()){
+                    $_SESSION['message'] = "Bound Discs";
+                } else {
+                    $_SESSION['message'] = "No Discs";
+                }
+
+            }
+            else{
+                echo("Error While Binding Discs.");
             }
             $conn = null;
         }

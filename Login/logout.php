@@ -14,7 +14,7 @@ require_once("header.php");
           
           <a href="index.php"><button class="button button-block"/>Home</button></a>
 
-    </div></section>
+        </div></section>
         <section class="content">
             
             <p>.</p>

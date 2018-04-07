@@ -16,13 +16,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     if (isset($_POST['login'])) {
         $dao->getUser($_POST['email'], $_POST['password']);
         echo($_SESSION['message']);
-        if($_SESSION['logged_in'] = true){
-            header('Login/success.php');
+        if($_SESSION['logged_in'] == true){
+            header('Login/profile.php');
         }
     } elseif (isset($_POST['signup'])) {
         $dao->addUser($_POST['email'], $_POST['password'], $_POST['name'], $_POST['phone']);
         echo($_SESSION['message']);
-        $_POST['signup'] = null;
+        if($_SESSION['logged_in']== true){
+            header('Login/profile.php');
+        }
+
         
     }
 }
@@ -104,61 +107,61 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
           <button type="submit" class="button button-block" name='signup' />Sign Up!</button>
           
           </form>
-        
-        
-        
-        <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-        
-        
-      <script>$('.form').find('input, textarea').on('keyup blur focus', function (e) {
-  
-            var $this = $(this),
-            label = $this.prev('label');
 
-                  if (e.type === 'keyup') {
+            <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+
+
+            <script>$('.form').find('input, textarea').on('keyup blur focus', function (e) {
+
+                    var $this = $(this),
+                        label = $this.prev('label');
+
+                    if (e.type === 'keyup') {
                         if ($this.val() === '') {
-                      label.removeClass('active highlight');
-                    } else {
-                      label.addClass('active highlight');
-                    }
-                } else if (e.type === 'blur') {
-                    if( $this.val() === '' ) {
-                        label.removeClass('active highlight'); 
+                            label.removeClass('active highlight');
                         } else {
-                        label.removeClass('highlight');   
-                        }   
-                } else if (e.type === 'focus') {
-
-                  if( $this.val() === '' ) {
-                        label.removeClass('highlight'); 
-                        } 
-                  else if( $this.val() !== '' ) {
-                        label.addClass('highlight');
+                            label.addClass('active highlight');
                         }
-                }
+                    } else if (e.type === 'blur') {
+                        if( $this.val() === '' ) {
+                            label.removeClass('active highlight');
+                        } else {
+                            label.removeClass('highlight');
+                        }
+                    } else if (e.type === 'focus') {
 
-            });
+                        if( $this.val() === '' ) {
+                            label.removeClass('highlight');
+                        }
+                        else if( $this.val() !== '' ) {
+                            label.addClass('highlight');
+                        }
+                    }
 
-        $('.tab a').on('click', function (e) {
-  
-          e.preventDefault();
+                });
 
-          $(this).parent().addClass('active');
-          $(this).parent().siblings().removeClass('active');
+                $('.tab a').on('click', function (e) {
 
-          target = $(this).attr('href');
+                    e.preventDefault();
 
-          $('.tab-content > div').not(target).hide();
+                    $(this).parent().addClass('active');
+                    $(this).parent().siblings().removeClass('active');
 
-          $(target).fadeIn(600);
+                    target = $(this).attr('href');
 
-        });</script>
+                    $('.tab-content > div').not(target).hide();
+
+                    $(target).fadeIn(600);
+
+                });</script>
+        
+
 
         </div>  
         
       </div>
       
-    </div> 
+    </div>
         
   </section>
 </div>

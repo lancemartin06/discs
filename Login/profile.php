@@ -2,7 +2,7 @@
 /* Displays user information and some useful messages */
 session_start();
 require_once 'header.php';
-
+$dao = new dao();
 // Check if user is logged in using the session variable
 if ( $_SESSION['logged_in'] != true ) {
   $_SESSION['message'] = "You must log in before viewing your profile page!";
@@ -10,62 +10,94 @@ if ( $_SESSION['logged_in'] != true ) {
 }
 else {
     // Makes it easier to read
-    $first_name = $_SESSION['name'];
-    $last_name = $_SESSION['last_name'];
+    $name = $_SESSION['name'];
+    $phone = $_SESSION['phone'];
     $email = $_SESSION['email'];
 }
 ?>
-<!DOCTYPE html>
-<html >
-<head>
-  <meta charset="UTF-8">
-  <title>Welcome <?= $first_name.' '.$last_name ?></title>
-  
-</head>
+  <link rel="stylesheet" href="CSS/mystyle2.css">
+  <title>Welcome <?= $name ?></title>
 
-<body>
   <div class="form">
 
           <h1>Welcome</h1>
           
-          <p>Here are your discs!
-              
-          <?php 
-     
-          // Display message about account verification link only once
-          if ( isset($_SESSION['message']) )
+          <p>Discs:
+
+            <form action="profile.php" method="post" autocomplete="off">
+
+              <<button class="button button-block" name="findDiscs"/>Find My Discs!</button></a>
+            </form>
+      <?php
+          if ($_SERVER['REQUEST_METHOD'] == 'POST')
           {
-              echo $_SESSION['message'];
-              
-              // Don't annoy the user with more messages upon page refresh
-              unset( $_SESSION['message'] );
+              if (isset($_POST['finddiscs'])) {
+                  $dao->bindDiscs($name, $email, $phone);
+                  echo($_SESSION['message']);
+                  $dao->getDiscs($name, $email, $phone);
+              }
           }
-          
-          ?>
+      ?>
           </p>
           
           <?php
           
-          // Keep reminding the user this account is not active, until they activate
-          if ( !$active ){
-              echo
-              '<div class="info">
-              Account is unverified, please confirm your email by clicking
-              on the email link!
-              </div>';
-          }
+
           
           ?>
           
-          <h2><?php echo $first_name.' '.$last_name; ?></h2>
+          <h2><?php echo $name; ?></h2>
           <p><?= $email ?></p>
           
           <a href="logout.php"><button class="button button-block" name="logout"/>Log Out</button></a>
 
     </div>
-    
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src="js/index.js"></script>
 
-</body>
-</html>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+
+
+<script>$('.form').find('input, textarea').on('keyup blur focus', function (e) {
+
+        var $this = $(this),
+            label = $this.prev('label');
+
+        if (e.type === 'keyup') {
+            if ($this.val() === '') {
+                label.removeClass('active highlight');
+            } else {
+                label.addClass('active highlight');
+            }
+        } else if (e.type === 'blur') {
+            if( $this.val() === '' ) {
+                label.removeClass('active highlight');
+            } else {
+                label.removeClass('highlight');
+            }
+        } else if (e.type === 'focus') {
+
+            if( $this.val() === '' ) {
+                label.removeClass('highlight');
+            }
+            else if( $this.val() !== '' ) {
+                label.addClass('highlight');
+            }
+        }
+
+    });
+
+    $('.tab a').on('click', function (e) {
+
+        e.preventDefault();
+
+        $(this).parent().addClass('active');
+        $(this).parent().siblings().removeClass('active');
+
+        target = $(this).attr('href');
+
+        $('.tab-content > div').not(target).hide();
+
+        $(target).fadeIn(600);
+
+    });</script>
+
+<?php require_once '../footer.php'; ?>

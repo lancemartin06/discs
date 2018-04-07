@@ -15,6 +15,6 @@ include_once 'header.php'
     endif;
     ?>
     </p>
-    <a href="../home.html"><button class="button button-block"/>Home</button></a>
+    <a href="profile.php"><button class="button button-block"/>Profile</button></a>
 </div>
 <?php require_once("footer.php");
