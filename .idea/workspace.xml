@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bba63ec-41cd-4e0d-bf5e-55226576ba4e" name="Default" comment="Update">
-      <change beforePath="$PROJECT_DIR$/CSS/mystyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/mystyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSS/mystyle2.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/mystyle2.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,8 +37,8 @@
       <file leaf-file-name="mystyle2.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CSS/mystyle2.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+            <state relative-caret-position="-648">
+              <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -209,12 +208,12 @@
       <workItem from="1522527206653" duration="9599000" />
       <workItem from="1522698515762" duration="2600000" />
       <workItem from="1522708520790" duration="5527000" />
-      <workItem from="1523052441789" duration="12824000" />
+      <workItem from="1523052441789" duration="13638000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32359000" />
+    <option name="totallyTimeSpent" value="33173000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -234,8 +233,8 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32941177" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.19117647" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.72545457" visible="true" weight="0.16639742" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.19117647" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.72545457" visible="true" weight="0.16639742" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49921876" weight="0.32859176" />
@@ -482,8 +481,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CSS/mystyle2.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+        <state relative-caret-position="-648">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
         </state>
       </provider>
     </entry>
