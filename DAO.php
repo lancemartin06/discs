@@ -30,13 +30,13 @@ class dao
 
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
         echo '<pre> Stmt: ';
-        var_dump($stmt);
+        var_dump($user);
         echo '</pre>';
 
         $stmt->closeCursor();
         $conn = null;
 
-        if($user !=  null) {
+        if($user !=  false) {
             return 1;
         }
         else {
