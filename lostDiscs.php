@@ -18,7 +18,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         $dao->getUser($_POST['email'], $_POST['password']);
         echo($_SESSION['message']);
         if($_SESSION['logged_in'] == true){
-            header('Location: profile.php');
+            //header('Location: profile.php');
+            echo '<pre>';
+            var_dump($_SESSION);
+            echo '</pre>';
         }
         else {
             echo '<pre>';
