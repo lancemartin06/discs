@@ -20,12 +20,9 @@ class dao
     }
     public function confirmUser($email)
     {
-        echo '<pre> testUser: ';
-        var_dump($email);
-        echo '</pre>';
 
         $conn =$this->getConnection();
-        $stmt = $conn->prepare("SELECT * FROM user WHERE email=':email'");
+        $stmt = $conn->prepare("SELECT * FROM user WHERE email = ':email'");
         $stmt->bindParam(':email', $email);
         $conn->exec($stmt);
         $testUser = $stmt->rowCount();
