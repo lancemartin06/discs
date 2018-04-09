@@ -20,7 +20,7 @@ else {
 
   <div class="form">
 
-          <h1>Welcome</h1>
+          <h1>Welcome <?= $name ?></h1>
           
           <p>Discs:
 
@@ -34,7 +34,7 @@ else {
               if (isset($_POST['finddiscs'])) {
                   $dao->bindDiscs($name, $email, $phone);
                   echo($_SESSION['message']);
-                  $dao->getDiscs($name, $email, $phone);
+                 $results = $dao->getDiscs($name, $email, $phone);
               }
           }
       ?>
@@ -46,6 +46,19 @@ else {
           <a href="logout.php"><button class="button button-block" name="logout"/>Log Out</button></a>
 
     </div>
+
+    <section class="content">
+        <?php
+            echo "<table style='border: solid 1px black;'>";
+            echo "<tr><th>Id</th><th>Brand</th><th>Model</th><th>Color</th><th>Plastic</th><th>Owner</th><th>Phone</th></tr>";
+
+                foreach($results as $disc){
+                    echo( "<tr><th>".$disc['disc_id'] . "</th><th>" . $disc['brand'] . "</th><th>" . $disc['model'] . "</th><th>" . $disc['color'] . "</th><th>" . $disc['plastic'] . "</th><th>" . $disc['contact_name'] . "</th><th>" . $disc['phone_num'] . "</th><th></tr>");
+            }
+
+            echo "</table>";
+        ?>
+    </section>
 
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
 
@@ -94,4 +107,4 @@ else {
 
     });</script>
 
-<?php require_once '../footer.php'; ?>
+<?php require_once 'footer.php'; ?>

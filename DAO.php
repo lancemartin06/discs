@@ -110,33 +110,25 @@ class dao
 
     //This function is used to retrieve the user's discs from the database using either their name, email
     //or phone number. Many of the discs in the database didn't have full names or phone numbers.
-    function getDiscs($name, $email, $phone){
+    function getDiscs(){
 
         $conn =$this->getConnection();
         try {
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             // prepare sql and bind parameters
-            $stmt = $conn->prepare("SELECT user_id FROM user (email, password) VALUES (:email, :password)");
-            $stmt->bindParam(':email', $email);
-            $stmt->bindParam(':password', $pass);
-
-
-
+            $stmt = $conn->prepare("SELECT * FROM disc_inventory WHERE user_id = :userID");
+            $stmt->bindParam(':userId', $_SESSION['user_id']);
+            $conn = null;
             if($stmt->execute())
             {
                 $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
                 $stmt->closeCursor();
-
-                $stmt = $conn->prepare("UPDATE disc_inventory SET user_id (email, password) VALUES (:email, :password)");
-                $stmt->bindParam(':email', $email);
-                $stmt->bindParam(':password', $pass);
-
+                return $result;
             }
             else{
-                echo("Error Occured While getting your discs.");
+                return "No Discs Found!";
             }
-            $conn = null;
         }
         catch(PDOException $e)
         {
@@ -144,6 +136,7 @@ class dao
         }
 
     }
+
     function bindDiscs($name, $email, $phone){
 
         $conn =$this->getConnection();
@@ -166,7 +159,7 @@ class dao
                     $_SESSION['user_id'] = $result['user_id'];
                 }
 
-                $stmt = $conn->prepare("UPDATE disc_inventory SET user_id = :userId WHERE name = :name OR phone = :phone");
+                $stmt = $conn->prepare("UPDATE disc_inventory SET user_id = :userId WHERE contact_name = :name OR phone_num = :phone");
                 $stmt->bindParam(':userID', $_SESSION['user_id']);
                 $stmt->bindParam(':name', $name);
                 $stmt->bindParam(':phone', $phone);
