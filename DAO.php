@@ -27,19 +27,19 @@ class dao
 
         $conn->exec($stmt);
 
-        $user = $stmt->fetch(PDO::FETCH_ASSOC);
-        echo '<pre> User from fetch cmd : ';
-        var_dump($user);
+        $result = $stmt->fetch(PDO::FETCH_LAZY);
+        echo '<pre> result from fetch cmd : ';
+        var_dump($result);
         echo '</pre>';
 
         $stmt->closeCursor();
         $conn = null;
 
-        if($user !=  false) {
-            return 1;
+        if($result ===  false) {
+            return 0;
         }
         else {
-            return 0;
+            return 1;
         }
 
     }
