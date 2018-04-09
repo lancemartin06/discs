@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3bba63ec-41cd-4e0d-bf5e-55226576ba4e" name="Default" comment="Update">
-      <change beforePath="$PROJECT_DIR$/dao.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao.php" afterDir="false" />
-    </list>
+    <list default="true" id="3bba63ec-41cd-4e0d-bf5e-55226576ba4e" name="Default" comment="Update" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,8 +26,8 @@
       <file leaf-file-name="dao.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dao.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="100" column="37" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
+            <state relative-caret-position="50">
+              <caret line="84" column="80" selection-start-line="84" selection-start-column="80" selection-end-line="84" selection-end-column="80" />
             </state>
           </provider>
         </entry>
@@ -222,12 +220,12 @@
       <workItem from="1522708520790" duration="5527000" />
       <workItem from="1523052441789" duration="19208000" />
       <workItem from="1523296287948" duration="664000" />
-      <workItem from="1523299711545" duration="1896000" />
+      <workItem from="1523299711545" duration="2362000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41303000" />
+    <option name="totallyTimeSpent" value="41769000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -634,8 +632,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dao.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="100" column="37" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
+        <state relative-caret-position="50">
+          <caret line="84" column="80" selection-start-line="84" selection-start-column="80" selection-end-line="84" selection-end-column="80" />
         </state>
       </provider>
     </entry>

@@ -82,13 +82,13 @@ class dao
                 return $_SESSION['message'] = "Email is invalid :( You should sign up!";
             }
             // prepare sql and bind parameters
-            $stmt = $conn->prepare("SELECT * FROM user WHERE user.email=':email' AND user.password=':password'");
+            $stmt = $conn->prepare("SELECT * FROM user WHERE email=':email' AND password=':password'");
             $stmt->bindParam(':email', $email);
             $stmt->bindParam(':password', $pass);
 
             if($stmt->execute())
             {
-                $user = $stmt->fetch(PDO::FETCH_ASSOC);
+                $user = $stmt->fetchALL(PDO::FETCH_ASSOC);
 
                 $_SESSION['user_id'] = $user['user_id'];
                 $_SESSION['email'] = $user['email'];
