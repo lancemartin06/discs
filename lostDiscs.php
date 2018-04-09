@@ -21,7 +21,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
             header('Location: profile.php');
         }
         else {
-            header('Location: lostDiscs.php');
+            echo '<pre>';
+            var_dump($_SESSION);
+            echo '</pre>';
+            //header('Location: lostDiscs.php');
         }
     } elseif (isset($_POST['signup'])) {
         $dao->addUser($_POST['email'], $_POST['password'], $_POST['name'], $_POST['phone']);
