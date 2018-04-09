@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3bba63ec-41cd-4e0d-bf5e-55226576ba4e" name="Default" comment="Update">
-      <change beforePath="$PROJECT_DIR$/dao.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao.php" afterDir="false" />
-    </list>
+    <list default="true" id="3bba63ec-41cd-4e0d-bf5e-55226576ba4e" name="Default" comment="Update" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,8 +26,8 @@
       <file leaf-file-name="dao.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dao.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+            <state relative-caret-position="124">
+              <caret line="24" column="71" lean-forward="true" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -222,12 +220,12 @@
       <workItem from="1522708520790" duration="5527000" />
       <workItem from="1523052441789" duration="19208000" />
       <workItem from="1523296287948" duration="664000" />
-      <workItem from="1523299711545" duration="6519000" />
+      <workItem from="1523299711545" duration="6583000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45926000" />
+    <option name="totallyTimeSpent" value="45990000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -240,7 +238,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.72545457" visible="true" weight="0.17124394" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -634,8 +631,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dao.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+        <state relative-caret-position="124">
+          <caret line="24" column="71" lean-forward="true" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="71" />
         </state>
       </provider>
     </entry>
