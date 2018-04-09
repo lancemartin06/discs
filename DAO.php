@@ -22,7 +22,7 @@ class dao
     {
 
         $conn =$this->getConnection();
-        $stmt = $conn->prepare("SELECT * FROM user WHERE email=':email'", array(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true));
+        $stmt = $conn->prepare("SELECT * FROM user WHERE email=':email'");
         $stmt->bindParam(':email', $email);
         $conn->exec($stmt);
         $testUser = $stmt->rowCount();
