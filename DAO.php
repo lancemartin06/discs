@@ -22,7 +22,7 @@ class dao
     {
 
         $conn =$this->getConnection();
-        $stmt = $conn->prepare("SELECT * FROM user WHERE user.email=':email'", array(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true));
+        $stmt = $conn->prepare("SELECT * FROM user WHERE email=':email'", array(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true));
         $stmt->bindParam(':email', $email);
         $testUser = $conn->exec($stmt);
         $stmt->closeCursor();
@@ -42,7 +42,7 @@ class dao
         try {
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            if ($testUser != 0)
+            if ($testUser == 1)
             {
                 $_SESSION['message'] = "Email is already in use!";
             }
