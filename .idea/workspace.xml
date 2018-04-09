@@ -64,8 +64,8 @@
       <file leaf-file-name="profile.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/profile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="55" column="273" selection-start-line="55" selection-start-column="273" selection-end-line="55" selection-end-column="273" />
+            <state relative-caret-position="270">
+              <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
               <folding>
                 <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
               </folding>
@@ -211,12 +211,12 @@
       <workItem from="1522527206653" duration="9599000" />
       <workItem from="1522698515762" duration="2600000" />
       <workItem from="1522708520790" duration="5527000" />
-      <workItem from="1523052441789" duration="18730000" />
+      <workItem from="1523052441789" duration="18988000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38265000" />
+    <option name="totallyTimeSpent" value="38523000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -229,15 +229,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50078124" side_tool="true" weight="0.2517781" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32941177" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.19117647" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.72545457" visible="true" weight="0.16639742" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.19117647" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.72545457" visible="true" weight="0.16639742" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49921876" weight="0.32859176" />
@@ -491,8 +490,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/profile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="55" column="273" selection-start-line="55" selection-start-column="273" selection-end-line="55" selection-end-column="273" />
+        <state relative-caret-position="270">
+          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
           <folding>
             <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
           </folding>

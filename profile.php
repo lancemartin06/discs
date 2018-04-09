@@ -16,11 +16,11 @@ else {
 }
 ?>
   <link rel="stylesheet" href="CSS/mystyle2.css">
-  <title>Welcome <?= $name ?></title>
+  <title>Welcome</title>
 
   <div class="form">
 
-          <h1>Welcome <?= $name ?></h1>
+          <h1>Welcome <?php echo $name; ?></h1>
           
           <p>Discs:
 
@@ -41,7 +41,7 @@ else {
           </p>
           
           <h2><?php echo $name; ?></h2>
-          <p><?= $email ?></p>
+
           
           <a href="logout.php"><button class="button button-block" name="logout"/>Log Out</button></a>
 
