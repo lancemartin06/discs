@@ -69,15 +69,13 @@ class dao
     }
 
     function getUser($email, $pass) {
-        $testUser = $this->confirmUser($email);
-        echo(" tested user");
+
         $conn =$this->getConnection();
-        echo(" Got second connection");
-        echo (" testUser = " . $testUser);
         try {
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            if ($testUser = 0)
+            $testUser = $this->confirmUser($email);
+            if ($testUser == 0)
             {
                 return $_SESSION['message'] = "Email is invalid :( You should sign up!";
             }
@@ -88,7 +86,7 @@ class dao
 
             if($stmt->execute())
             {
-                $user = $stmt->fetchALL(PDO::FETCH_ASSOC);
+                $user = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                 $_SESSION['user_id'] = $user['user_id'];
                 $_SESSION['email'] = $user['email'];
