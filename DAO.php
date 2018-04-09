@@ -98,14 +98,11 @@ class dao
                 $_SESSION['message'] = "Login Successful!";
                 $_SESSION['logged_in'] = true;
 
-                echo '<pre> Statement: ';
-                var_dump($stmt);
-                echo '</pre>';
 
-                $stmt->closeCursor();
                 echo '<pre> User: ';
                 var_dump($user);
                 echo '</pre>';
+                $stmt->closeCursor();
             }
             else{
                 $_SESSION['message'] = "Login Failed";
