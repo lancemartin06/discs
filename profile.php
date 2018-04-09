@@ -20,7 +20,7 @@ else {
 
   <div class="form">
 
-          <h1>Welcome <?php echo $name; ?></h1>
+          <h1>Welcome <?php echo($_SESSION['name']); ?></h1>
           
           <p>Discs:
 
