@@ -24,7 +24,8 @@ class dao
         $conn =$this->getConnection();
         $stmt = $conn->prepare("SELECT * FROM user WHERE email=':email'", array(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true));
         $stmt->bindParam(':email', $email);
-        $testUser = $conn->exec($stmt);
+        $conn->exec($stmt);
+        $testUser = $stmt->fetchAll();
         echo '<pre> testUser: ';
         var_dump($testUser);
         echo '</pre>';
