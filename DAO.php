@@ -23,13 +23,12 @@ class dao
 
         $conn =$this->getConnection();
         $stmt = $conn->prepare("SELECT * FROM user WHERE email = ':email'");
-        $stmt->bindParam(':email', $myEmail);
-        $myEmail = $email;
+        $stmt->bindParam(':email', $email);
 
         $conn->exec($stmt);
 
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
-        echo '<pre> Stmt: ';
+        echo '<pre> User from fetch cmd : ';
         var_dump($user);
         echo '</pre>';
 
