@@ -25,9 +25,16 @@ class dao
         $stmt = $conn->prepare("SELECT * FROM user WHERE email = ':email'");
         $stmt->bindParam(':email', $email);
 
-        $conn->exec($stmt);
+        if($conn->exec($stmt)){
+            echo '<pre> Query is good!  ';
+            echo '</pre>';
+        }
+        else{
+            echo '<pre> Query failed!!!  ';
+            echo '</pre>';
+        }
 
-        $result = $stmt->fetch(PDO::FETCH_LAZY);
+        $result = $stmt->fetch();
         echo '<pre> result from fetch cmd : ';
         var_dump($result);
         echo '</pre>';
