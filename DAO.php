@@ -22,9 +22,9 @@ class dao
     {
 
         $conn =$this->getConnection();
-        $stmt = $conn->prepare("SELECT * FROM user WHERE email = ':email'");
+        $stmt = $conn->prepare("SELECT * FROM user WHERE email = :email");
         $stmt->bindParam(':email', $email);
-        $conn->exec($stmt);
+        echo($conn->exec($stmt));
         $testUser = $stmt->rowCount();
         echo '<pre> testUser: ';
         var_dump($testUser);
@@ -84,7 +84,7 @@ class dao
                 return $_SESSION['message'] = "Email is invalid :( You should sign up!";
             }
             // prepare sql and bind parameters
-            $stmt = $conn->prepare("SELECT * FROM user WHERE email=':email' AND password=':password'");
+            $stmt = $conn->prepare("SELECT * FROM user WHERE email = :email AND password = :password");
             $stmt->bindParam(':email', $email);
             $stmt->bindParam(':password', $pass);
 
