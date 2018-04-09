@@ -10,6 +10,9 @@ if ( $_SESSION['logged_in'] != true ) {
 }
 else {
     // Makes it easier to read
+    echo '<pre>';
+    var_dump($_SESSION);
+    echo '</pre>';
     $name = $_SESSION['name'];
     $phone = $_SESSION['phone'];
     $email = $_SESSION['email'];
