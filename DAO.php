@@ -89,16 +89,18 @@ class dao
             if($stmt->execute())
             {
                 $user = $stmt->fetch(PDO::FETCH_ASSOC);
-                $stmt->closeCursor();
+                $_SESSION['user_id'] = $user['user_id'];
                 $_SESSION['email'] = $user['email'];
                 $_SESSION['password'] = $user['password'];
                 $_SESSION['name'] = $user['name'];
                 $_SESSION['phone'] = $user['phone'];
                 $_SESSION['message'] = "Login Successful!";
                 $_SESSION['logged_in'] = true;
+                $stmt->closeCursor();
             }
             else{
                 $_SESSION['message'] = "Login Failed";
+                $stmt->closeCursor();
             }
             $conn = null;
         }
