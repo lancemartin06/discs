@@ -159,7 +159,7 @@ class dao
 
     }
 
-    function bindDiscs($name, $email, $phone){
+    function bindDiscs($name, $phone){
 
         $conn =$this->getConnection();
         try {

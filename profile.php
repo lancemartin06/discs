@@ -36,6 +36,7 @@ else {
                   $dao->bindDiscs($name, $email, $phone);
                   echo($_SESSION['message']);
                  $results = $dao->getDiscs($name, $email, $phone);
+
                   echo '<pre>';
                   var_dump($results);
                   echo '</pre>';
