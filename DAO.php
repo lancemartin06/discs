@@ -139,7 +139,7 @@ class dao
             $stmt->bindParam(':user_id', $_SESSION['user_id']);
             if($stmt->execute())
             {
-                $result = $stmt->fetch(PDO::FETCH_ASSOC);
+                $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 return $result;
             }
             else{
