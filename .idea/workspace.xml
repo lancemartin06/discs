@@ -28,8 +28,8 @@
       <file leaf-file-name="dao.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dao.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="104" column="82" selection-start-line="104" selection-start-column="82" selection-end-line="104" selection-end-column="82" />
+            <state relative-caret-position="192">
+              <caret line="104" column="36" lean-forward="true" selection-start-line="104" selection-start-column="36" selection-end-line="104" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -222,12 +222,12 @@
       <workItem from="1522708520790" duration="5527000" />
       <workItem from="1523052441789" duration="19208000" />
       <workItem from="1523296287948" duration="664000" />
-      <workItem from="1523299711545" duration="8855000" />
+      <workItem from="1523299711545" duration="9199000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48262000" />
+    <option name="totallyTimeSpent" value="48606000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -613,8 +613,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dao.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="104" column="82" selection-start-line="104" selection-start-column="82" selection-end-line="104" selection-end-column="82" />
+        <state relative-caret-position="192">
+          <caret line="104" column="36" lean-forward="true" selection-start-line="104" selection-start-column="36" selection-end-line="104" selection-end-column="36" />
         </state>
       </provider>
     </entry>

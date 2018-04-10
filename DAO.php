@@ -92,7 +92,8 @@ class dao
             $testUser = $this->confirmUser($email);
             if ($testUser == 0)
             {
-                return $_SESSION['message'] = "Email is invalid :( You should sign up!";
+                $_SESSION['message'] = "Email is invalid :( You should sign up!";
+                header('Location: lostDiscs.php');
             }
             // prepare sql and bind parameters
             $stmt = $conn->prepare("SELECT * FROM user WHERE email = :email AND password = :password");
@@ -101,7 +102,7 @@ class dao
 
             if($stmt->execute())
             {
-                $user = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                $user = $stmt->fetch(PDO::FETCH_ASSOC);
                 echo("Hey this is what is in user['user_id'] ". $user['user_id']);
                 $_SESSION['user_id'] = $user['user_id'];
                 $_SESSION['email'] = $user['email'];
