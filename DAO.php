@@ -111,10 +111,6 @@ class dao
                 $_SESSION['message'] = "Login Successful!";
                 $_SESSION['logged_in'] = true;
 
-
-                echo '<pre> User: ';
-                var_dump($user);
-                echo '</pre>';
                 $stmt->closeCursor();
             }
             else{
@@ -143,7 +139,7 @@ class dao
             $stmt->bindParam(':user_id', $_SESSION['user_id']);
             if($stmt->execute())
             {
-                $result = $stmt->fetchAll();
+                $result = $stmt->fetch(PDO::FETCH_ASSOC);
                 return $result;
             }
             else{
