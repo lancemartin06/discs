@@ -33,9 +33,9 @@ else {
           if ($_SERVER['REQUEST_METHOD'] == 'POST')
           {
               if (isset($_POST['finddiscs'])) {
-                  $dao->bindDiscs($name, $email, $phone);
+                  $dao->bindDiscs($name, $phone);
                   echo($_SESSION['message']);
-                  $results = $dao->getDiscs($name, $email, $phone);
+                  $results = $dao->getDiscs();
 
                   echo '<pre>';
                   var_dump($results);

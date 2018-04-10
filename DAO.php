@@ -144,7 +144,6 @@ class dao
             if($stmt->execute())
             {
                 $result = $stmt->fetchAll();
-                $stmt->closeCursor();
                 return $result;
             }
             else{
@@ -166,37 +165,18 @@ class dao
         try {
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            // prepare sql and bind parameters
-            $stmt = $conn->prepare("SELECT user_id FROM user (email, password) VALUES (:email, :password)");
-            $stmt->bindParam(':email', $email);
-            $stmt->bindParam(':password', $pass);
+            $stmt = $conn->prepare("UPDATE disc_inventory SET user_id = :userId WHERE contact_name = :name OR phone_num = :phone");
+            $stmt->bindParam(':userID', $_SESSION['user_id']);
+            $stmt->bindParam(':name', $name);
+            $stmt->bindParam(':phone', $phone);
 
-
-
-            if($stmt->execute())
-            {
-                $result = $stmt->fetch(PDO::FETCH_ASSOC);
-                $stmt->closeCursor();
-
-                if(isset($result['user_id'])){
-                    $_SESSION['user_id'] = $result['user_id'];
-                }
-
-                $stmt = $conn->prepare("UPDATE disc_inventory SET user_id = :userId WHERE contact_name = :name OR phone_num = :phone");
-                $stmt->bindParam(':userID', $_SESSION['user_id']);
-                $stmt->bindParam(':name', $name);
-                $stmt->bindParam(':phone', $phone);
-
-                if($stmt->execute()){
-                    $_SESSION['message'] = "Bound Discs";
-                } else {
-                    $_SESSION['message'] = "No Discs";
-                }
-
+            if($stmt->execute()){
+                $_SESSION['message'] = "Bound Discs";
+            } else {
+                $_SESSION['message'] = "No Discs";
             }
-            else{
-                echo("Error While Binding Discs.");
-            }
+
+            $stmt->closeCursor();
             $conn = null;
         }
         catch(PDOException $e)
