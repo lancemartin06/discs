@@ -141,7 +141,6 @@ class dao
             // prepare sql and bind parameters
             $stmt = $conn->prepare("SELECT * FROM disc_inventory WHERE user_id = :userID");
             $stmt->bindParam(':userId', $_SESSION['user_id']);
-            $conn = null;
             if($stmt->execute())
             {
                 $result = $stmt->fetchAll();
@@ -151,9 +150,11 @@ class dao
             else{
                 return "No Discs Found!";
             }
+
         }
         catch(PDOException $e)
         {
+            $conn = null;
             echo "Error: " . $e->getMessage();
         }
 
@@ -174,7 +175,7 @@ class dao
 
             if($stmt->execute())
             {
-                $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+                $result = $stmt->fetch(PDO::FETCH_ASSOC);
                 $stmt->closeCursor();
 
                 if(isset($result['user_id'])){

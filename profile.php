@@ -35,7 +35,7 @@ else {
               if (isset($_POST['finddiscs'])) {
                   $dao->bindDiscs($name, $email, $phone);
                   echo($_SESSION['message']);
-                 $results = $dao->getDiscs($name, $email, $phone);
+                  $results = $dao->getDiscs($name, $email, $phone);
 
                   echo '<pre>';
                   var_dump($results);
