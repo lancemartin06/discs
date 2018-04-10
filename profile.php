@@ -55,12 +55,9 @@ else {
             echo "<table style='border: solid 1px black;'>";
             echo "<tr><th>Id</th><th>Brand</th><th>Model</th><th>Color</th><th>Plastic</th><th>Owner</th><th>Phone</th></tr>";
 
-                foreach($results as $row){
-                    foreach($row as $disc){
+                foreach($results as $disc) {
                         echo( "<tr><th>".$disc['disc_id'] . "</th><th>" . $disc['brand'] . "</th><th>" . $disc['model'] . "</th><th>" . $disc['color'] . "</th><th>" . $disc['plastic'] . "</th><th>" . $disc['contact_name'] . "</th><th>" . $disc['phone_num'] . "</th><th></tr>");
                     }
-
-            }
 
             echo "</table>";
         ?>
