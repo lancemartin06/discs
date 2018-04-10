@@ -159,14 +159,14 @@ class dao
 
     }
 
-    function bindDiscs($name, $phone, $userId){
+    function bindDiscs($name, $phone, $user_id){
 
         $conn =$this->getConnection();
         try {
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            $stmt = $conn->prepare("UPDATE disc_inventory SET user_id = :userId WHERE contact_name = :name OR phone_num = :phone");
-            $stmt->bindParam(':userID', $userId);
+            $stmt = $conn->prepare("UPDATE disc_inventory SET user_id = :user_id WHERE contact_name = :name OR phone_num = :phone");
+            $stmt->bindParam(':userID', $user_id);
             $stmt->bindParam(':name', $name);
             $stmt->bindParam(':phone', $phone);
 

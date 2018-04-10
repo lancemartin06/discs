@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3bba63ec-41cd-4e0d-bf5e-55226576ba4e" name="Default" comment="Update">
-      <change beforePath="$PROJECT_DIR$/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile.php" afterDir="false" />
-    </list>
+    <list default="true" id="3bba63ec-41cd-4e0d-bf5e-55226576ba4e" name="Default" comment="Update" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,11 +23,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dao.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dao.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dao.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="167" column="128" lean-forward="true" selection-start-line="167" selection-start-column="36" selection-end-line="167" selection-end-column="128" />
+            <state relative-caret-position="22">
+              <caret line="167" column="114" lean-forward="true" selection-start-line="167" selection-start-column="114" selection-end-line="167" selection-end-column="114" />
             </state>
           </provider>
         </entry>
@@ -61,7 +59,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="profile.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/profile.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
@@ -125,8 +123,8 @@
         <option value="$PROJECT_DIR$/lostDiscs.php" />
         <option value="$PROJECT_DIR$/CSS/mystyle2.css" />
         <option value="$PROJECT_DIR$/CSS/mystyle.css" />
-        <option value="$PROJECT_DIR$/dao.php" />
         <option value="$PROJECT_DIR$/profile.php" />
+        <option value="$PROJECT_DIR$/dao.php" />
       </list>
     </option>
   </component>
@@ -222,12 +220,12 @@
       <workItem from="1522708520790" duration="5527000" />
       <workItem from="1523052441789" duration="19208000" />
       <workItem from="1523296287948" duration="664000" />
-      <workItem from="1523299711545" duration="13095000" />
+      <workItem from="1523299711545" duration="13606000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52502000" />
+    <option name="totallyTimeSpent" value="53013000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -620,13 +618,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="167" column="128" lean-forward="true" selection-start-line="167" selection-start-column="36" selection-end-line="167" selection-end-column="128" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Login/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -641,6 +632,13 @@
           <folding>
             <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="167" column="114" lean-forward="true" selection-start-line="167" selection-start-column="114" selection-end-line="167" selection-end-column="114" />
         </state>
       </provider>
     </entry>
