@@ -19,6 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
         if($_SESSION['logged_in'] == true){
             //header('Location: profile.php');
+            echo("Session: ". var_dump($_SESSION));
         }
         else {
             header('Location: lostDiscs.php');
