@@ -10,9 +10,7 @@ if ( $_SESSION['logged_in'] != true ) {
 }
 else {
     // Makes it easier to read
-    echo '<pre>';
-    var_dump($_SESSION);
-    echo '</pre>';
+
     $name = $_SESSION['name'];
     $phone = $_SESSION['phone'];
     $email = $_SESSION['email'];
@@ -38,6 +36,10 @@ else {
                   $dao->bindDiscs($name, $email, $phone);
                   echo($_SESSION['message']);
                  $results = $dao->getDiscs($name, $email, $phone);
+                  echo '<pre>';
+                  var_dump($results);
+                  echo '</pre>';
+
               }
           }
       ?>
