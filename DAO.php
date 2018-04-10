@@ -139,8 +139,8 @@ class dao
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             // prepare sql and bind parameters
-            $stmt = $conn->prepare("SELECT * FROM disc_inventory WHERE user_id = :userID");
-            $stmt->bindParam(':userId', $_SESSION['user_id']);
+            $stmt = $conn->prepare("SELECT * FROM disc_inventory WHERE user_id = :user_id");
+            $stmt->bindParam(':user_id', $_SESSION['user_id']);
             if($stmt->execute())
             {
                 $result = $stmt->fetchAll();
@@ -165,9 +165,9 @@ class dao
         try {
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            $stmt = $conn->prepare("UPDATE disc_inventory SET user_id = :user_id WHERE contact_name = :name OR phone_num = :phone");
-            $stmt->bindParam(':userID', $user_id);
-            $stmt->bindParam(':name', $name);
+            $stmt = $conn->prepare("UPDATE disc_inventory SET user_id = :user_id WHERE contact_name = :nme OR phone_num = :phone");
+            $stmt->bindParam(':user_id', $user_id);
+            $stmt->bindParam(':nme', $name);
             $stmt->bindParam(':phone', $phone);
 
             if($stmt->execute()){
