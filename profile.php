@@ -13,7 +13,7 @@ else {
 
     $name = $_SESSION['name'];
     $phone = $_SESSION['phone'];
-    $email = $_SESSION['email'];
+    $user_id = $_SESSION['user_id'];
 }
 ?>
   <link rel="stylesheet" href="CSS/mystyle2.css">
@@ -33,8 +33,8 @@ else {
           if ($_SERVER['REQUEST_METHOD'] == 'POST')
           {
               if (isset($_POST['findDiscs'])) {
-                  $dao->bindDiscs($name, $phone);
-                  echo($_SESSION['message']);
+                  $dao->bindDiscs($name, $phone, $user_id);
+                  echo($_SESSION['user_id']);
                   $results = $dao->getDiscs();
 
                   echo '<pre>';
