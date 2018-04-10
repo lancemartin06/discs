@@ -16,15 +16,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
     if (isset($_POST['login'])) {
         $dao->getUser($_POST['email'], $_POST['password']);
-        echo($_SESSION['message']);
+
         if($_SESSION['logged_in'] == true){
-            //header('Location: profile.php');
+            header('Location: profile.php');
         }
         else {
-            echo '<pre>';
-            var_dump($_SESSION);
-            echo '</pre>';
-            //header('Location: lostDiscs.php');
+            header('Location: lostDiscs.php');
         }
     } elseif (isset($_POST['signup'])) {
         $dao->addUser($_POST['email'], $_POST['password'], $_POST['name'], $_POST['phone']);
