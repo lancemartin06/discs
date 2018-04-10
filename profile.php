@@ -6,7 +6,7 @@ $dao = new dao();
 // Check if user is logged in using the session variable
 if ( $_SESSION['logged_in'] != true ) {
   $_SESSION['message'] = "You must log in before viewing your profile page!";
-
+  header("Location: lostDiscs.php");
 }
 else {
     // Makes it easier to read

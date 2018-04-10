@@ -121,6 +121,7 @@ class dao
                 $stmt->closeCursor();
             }
             else{
+                $_SESSION['logged_in'] = false;
                 $_SESSION['message'] = "Login Failed";
                 $stmt->closeCursor();
             }
