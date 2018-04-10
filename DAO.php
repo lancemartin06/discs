@@ -22,11 +22,17 @@ class dao
     {
 
         $conn =$this->getConnection();
-        $stmt = $conn->prepare("SELECT user_id FROM user WHERE email = :email");
+        $stmt = $conn->prepare("SELECT * FROM user WHERE email = :email");
         $stmt->bindParam(':email', $email);
 
-        if($stmt->exececute()){
+
+        if($stmt->execute()){
             echo '<pre> Query is good!  ';
+            echo '</pre>';
+
+            $result = $stmt->fetchAll();
+            echo '<pre> result from fetch cmd : ';
+            var_dump($result);
             echo '</pre>';
         }
         else{
@@ -34,19 +40,16 @@ class dao
             echo '</pre>';
         }
 
-        $result = $stmt->fetch();
-        echo '<pre> result from fetch cmd : ';
-        var_dump($result);
-        echo '</pre>';
+
 
         $stmt->closeCursor();
         $conn = null;
 
-        if($result ===  false) {
-            return 0;
+        if($result != null) {
+            return 1;
         }
         else {
-            return 1;
+            return 0;
         }
 
     }
