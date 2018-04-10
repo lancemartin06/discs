@@ -25,7 +25,7 @@ class dao
         $stmt = $conn->prepare("SELECT user_id FROM user WHERE email = :email");
         $stmt->bindParam(':email', $email);
 
-        if($conn->exec($stmt)){
+        if($stmt->exececute()){
             echo '<pre> Query is good!  ';
             echo '</pre>';
         }
