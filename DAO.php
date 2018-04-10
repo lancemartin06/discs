@@ -31,9 +31,6 @@ class dao
             echo '</pre>';
 
             $result = $stmt->fetchAll();
-            echo '<pre> result from fetch cmd : ';
-            var_dump($result);
-            echo '</pre>';
         }
         else{
             echo '<pre> Query failed!!!  ';
@@ -105,7 +102,7 @@ class dao
             if($stmt->execute())
             {
                 $user = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
+                echo("Hey this is what is in user['user_id'] ". $user['user_id']);
                 $_SESSION['user_id'] = $user['user_id'];
                 $_SESSION['email'] = $user['email'];
                 $_SESSION['password'] = $user['password'];
