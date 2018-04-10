@@ -32,7 +32,7 @@ else {
       <?php
           if ($_SERVER['REQUEST_METHOD'] == 'POST')
           {
-              if (isset($_POST['finddiscs'])) {
+              if (isset($_POST['findDiscs'])) {
                   $dao->bindDiscs($name, $phone);
                   echo($_SESSION['message']);
                   $results = $dao->getDiscs();
