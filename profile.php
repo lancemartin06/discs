@@ -27,7 +27,7 @@ else {
 
             <form action="profile.php" method="post" autocomplete="off">
 
-              <<button class="button button-block" name="findDiscs"/>Find My Discs!</button></a>
+              <button class="button button-block" name="findDiscs"/>Find My Discs!</button></a>
             </form>
       <?php
           if ($_SERVER['REQUEST_METHOD'] == 'POST')
