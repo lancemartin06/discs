@@ -22,7 +22,7 @@ class dao
     {
 
         $conn =$this->getConnection();
-        $stmt = $conn->prepare("SELECT * FROM user WHERE email = :email");
+        $stmt = $conn->prepare("SELECT user_id FROM user WHERE email = :email");
         $stmt->bindParam(':email', $email);
 
         if($conn->exec($stmt)){
