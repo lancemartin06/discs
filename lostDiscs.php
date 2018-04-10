@@ -18,8 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         $dao->getUser($_POST['email'], $_POST['password']);
 
         if($_SESSION['logged_in'] == true){
-            //header('Location: profile.php');
-            echo("Session: ". var_dump($_SESSION));
+            header('Location: profile.php');
         }
         else {
             header('Location: lostDiscs.php');
