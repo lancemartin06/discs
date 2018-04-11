@@ -21,15 +21,6 @@ a:hover {
   color: #A9510D;
 }
 
-.form {
-  background: rgba(6, 47, 14, 0.9);
-  padding: 100px;
-  max-width: 600px;
-  margin: 1% auto;
-  border-radius: 4px;
-  box-shadow: 0 4px 10px 4px rgba(6, 47, 14, 0.9);
-}
-
 .tab-group {
   list-style: none;
   padding: 0;

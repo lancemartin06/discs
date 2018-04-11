@@ -52,7 +52,7 @@ else {
 
     <section class="content">
         <?php
-            echo "<table style='border: solid 1px black;'>";
+            echo "<table class = firstCenter style='border: solid 1px black;'>";
             echo "<tr><th>Id</th><th>Brand</th><th>Model</th><th>Color</th><th>Plastic</th><th>Owner</th><th>Phone</th></tr>";
 
                 foreach($results as $disc) {
