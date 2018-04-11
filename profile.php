@@ -34,10 +34,7 @@ else {
           {
               if (isset($_POST['findDiscs'])) {
                   $dao->bindDiscs($name, $phone, $user_id);
-                  echo($_SESSION['user_id']);
                   $results = $dao->getDiscs();
-
-
               }
           }
       ?>
