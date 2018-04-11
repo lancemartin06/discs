@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3bba63ec-41cd-4e0d-bf5e-55226576ba4e" name="Default" comment="Update">
       <change beforePath="$PROJECT_DIR$/CSS/mystyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/mystyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSS/mystyle2.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/mystyle2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,10 +16,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="lostDiscs.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="lostDiscs.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lostDiscs.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1291">
+            <state relative-caret-position="-789">
               <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
             </state>
           </provider>
@@ -93,11 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mystyle.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mystyle.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CSS/mystyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+            <state relative-caret-position="238">
+              <caret line="196" lean-forward="true" selection-start-line="196" selection-end-line="196" />
             </state>
           </provider>
         </entry>
@@ -117,9 +115,9 @@
         <option value="$PROJECT_DIR$/logout.php" />
         <option value="$PROJECT_DIR$/lostDiscs.php" />
         <option value="$PROJECT_DIR$/dao.php" />
-        <option value="$PROJECT_DIR$/CSS/mystyle.css" />
         <option value="$PROJECT_DIR$/CSS/mystyle2.css" />
         <option value="$PROJECT_DIR$/profile.php" />
+        <option value="$PROJECT_DIR$/CSS/mystyle.css" />
       </list>
     </option>
   </component>
@@ -215,12 +213,12 @@
       <workItem from="1522708520790" duration="5527000" />
       <workItem from="1523052441789" duration="19208000" />
       <workItem from="1523296287948" duration="664000" />
-      <workItem from="1523299711545" duration="15250000" />
+      <workItem from="1523299711545" duration="15969000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54657000" />
+    <option name="totallyTimeSpent" value="55376000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -623,17 +621,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CSS/mystyle.css">
+    <entry file="file://$PROJECT_DIR$/lostDiscs.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        <state relative-caret-position="-789">
+          <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lostDiscs.php">
+    <entry file="file://$PROJECT_DIR$/CSS/mystyle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1291">
-          <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+        <state relative-caret-position="238">
+          <caret line="196" lean-forward="true" selection-start-line="196" selection-end-line="196" />
         </state>
       </provider>
     </entry>
