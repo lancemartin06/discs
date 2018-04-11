@@ -214,8 +214,6 @@ div.table-title {
 }
 
 
-/*** Table Styles **/
-
 .table-fill {
     background: white;
     border-radius:3px;
@@ -250,7 +248,9 @@ th:last-child {
     border-top-right-radius:3px;
     border-right:none;
 }
-
+.content table{
+    align-self: center;
+}
 tr {
     border-top: 1px solid #C1C3D1;
     border-bottom-: 1px solid #C1C3D1;
@@ -299,10 +299,6 @@ td {
     font-size:18px;
     text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
     border-right: 1px solid #C1C3D1;
-}
-
-th.text-left {
-    text-align: left;
 }
 
 th.text-center {
