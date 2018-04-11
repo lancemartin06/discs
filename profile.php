@@ -37,9 +37,6 @@ else {
                   echo($_SESSION['user_id']);
                   $results = $dao->getDiscs();
 
-                  echo '<pre>';
-                  var_dump($results);
-                  echo '</pre>';
 
               }
           }
@@ -52,7 +49,7 @@ else {
 
     <section class="content">
         <?php
-            echo "<table class = firstCenter style='border: solid 1px black;'>";
+            echo "<table style='border: solid 1px black;'>";
             echo "<tr><th>Id</th><th>Brand</th><th>Model</th><th>Color</th><th>Plastic</th><th>Owner</th><th>Phone</th></tr>";
 
                 foreach($results as $disc) {
