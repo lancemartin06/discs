@@ -53,7 +53,7 @@ else {
             echo "<tr><th>Id</th><th>Brand</th><th>Model</th><th>Color</th><th>Plastic</th><th>Owner</th><th>Phone</th></tr>";
 
                 foreach($results as $disc) {
-                        echo( "<tr><th>".$disc['disc_id'] . "</th><th>" . $disc['brand'] . "</th><th>" . $disc['model'] . "</th><th>" . $disc['color'] . "</th><th>" . $disc['plastic'] . "</th><th>" . $disc['contact_name'] . "</th><th>" . $disc['phone_num'] . "</th><th></tr>");
+                        echo( "<tr><td>".$disc['disc_id'] . "</td><td>" . $disc['brand'] . "</td><td>" . $disc['model'] . "</td><td>" . $disc['color'] . "</td><td>" . $disc['plastic'] . "</td><td>" . $disc['contact_name'] . "</td><td>" . $disc['phone_num'] . "</td><td></tr>");
                     }
 
             echo "</table>";

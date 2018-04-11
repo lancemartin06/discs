@@ -301,10 +301,6 @@ td {
     border-right: 1px solid #C1C3D1;
 }
 
-td:last-child {
-    border-right: 0px;
-}
-
 th.text-left {
     text-align: left;
 }
@@ -313,19 +309,8 @@ th.text-center {
     text-align: center;
 }
 
-th.text-right {
-    text-align: right;
-}
-
-td.text-left {
-    text-align: left;
-}
-
 td.text-center {
     text-align: center;
 }
 
-td.text-right {
-    text-align: right;
-}
 
