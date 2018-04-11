@@ -1,9 +1,11 @@
 <?php
 /* Log out process, unsets and destroys session variables */
 session_start();
+$_SESSION['logged_in'] = false;
 define("PAGENAME", "logout");
+require_once("header.php");
 session_destroy();
-require_once("header.php"); 
+
 ?>
     <title>Logout</title>
         
