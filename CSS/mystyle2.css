@@ -6,6 +6,15 @@ html {
   overflow-y: scroll;
 }
 
+.form {
+  background: rgba(6, 47, 14, 0.9);
+  padding: 100px 45px;
+  max-width: 600px;
+  margin: 0% auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 4px rgba(6, 47, 14, 0.9);
+}
+
 body {
   background: #ffffff;
   font-family: Quicksand;
