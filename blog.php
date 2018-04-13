@@ -52,9 +52,9 @@
                 these situations from the perspective of the people. The biggest concerns is, what will happen to
                 our jobs?
 
-                Well, some jobs will be at risk. A study was done in 2013 by <a href="www.oxfordmartin.ox.ac.uk/downloads/academic/The_Future_of_Employment.pdf.">Carl Frey and Michael Osborne</a>>, stated
-                47% of jobs may be at risk of being replaced by automation (Frey 2013).  That’s an astounding amount.
-                In 2016,<a href="https://obamawhitehouse.archives.gov/sites/whitehouse.gov/files/documents/Artificial-Intelligence-Automation-Economy.PDF"> Council of Economic Advisors</a>> (CEA) determined that 83% of people with an occupation that is
+                Well, some jobs will be at risk. A study was done in 2013 by <a href="www.oxfordmartin.ox.ac.uk/downloads/academic/The_Future_of_Employment.pdf.">Carl Frey and Michael Osborne</a>, stated
+                47% of jobs may be at risk of being replaced by automation.  That’s an astounding amount.
+                In 2016,<a href="https://obamawhitehouse.archives.gov/sites/whitehouse.gov/files/documents/Artificial-Intelligence-Automation-Economy.PDF"> Council of Economic Advisors</a> (CEA) determined that 83% of people with an occupation that is
                 making less than twenty dollars per hour would be at risk. Positions making around twenty-forty an hour
                 have a 31% risk, and everyone making more than the would be staring down a 4% risk. So, if you are seeing
                 this, you might notice that’s mostly everyone.
