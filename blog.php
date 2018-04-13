@@ -1,14 +1,18 @@
-<?php
-    define("PAGENAME", "starting");
+<html>
+<head>
+    <link rel="stylesheet" href="CSS/mystyle.css">
+    <link rel="shortcut icon" href="/Pictures/favicon.ico" type="image/x-icon"/>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+</head>
 
-    require_once("header.php");
+<body>
+<div class = "wrapper">
 
-?>
     <title>Lance's Blog</title>
         
         <section class="sec1">Bloggin'</section>
         <section class="content">
-            <h1>AI and the future Workforce</h1>
+            <h1>AI and the Future Workforce</h1>
             <pre>   There has been a lot of worry in the media about artificial intelligence and how it’s going to
                 change our lives. We seem to have this perception that we are on an unstoppable technology train and
                 there is no stopping what is coming. So, what’s coming? Oh, just a man made all knowing computer god
