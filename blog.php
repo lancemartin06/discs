@@ -10,8 +10,8 @@
 
     <title>Lance's Blog</title>
         
-        <section class="sec1"><h2>CS 498</h2></section>
-        <section class="content">
+       <h2>CS 498</h2></section>
+        <section class="content" style="background-image:url("Pictures/try.png");" >
             <h1>AI and the Future Workforce</h1>
             <h1>Lance Martin APR 9 2018</h1>
             <pre>   There has been a lot of worry in the media about artificial intelligence and how it’s going to
