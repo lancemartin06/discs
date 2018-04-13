@@ -10,9 +10,10 @@
 
     <title>Lance's Blog</title>
         
-        <section class="sec1">Bloggin'</section>
+        <section class="sec1"><h2>CS 498</h2></section>
         <section class="content">
             <h1>AI and the Future Workforce</h1>
+            <h1>Lance Martin APR 9 2018</h1>
             <pre>   There has been a lot of worry in the media about artificial intelligence and how it’s going to
                 change our lives. We seem to have this perception that we are on an unstoppable technology train and
                 there is no stopping what is coming. So, what’s coming? Oh, just a man made all knowing computer god
@@ -51,18 +52,18 @@
                 these situations from the perspective of the people. The biggest concerns is, what will happen to
                 our jobs?
 
-                    Well, some jobs will be at risk. A study was done in 2013 by Carl Frey and Michael Osborne, stated
+                Well, some jobs will be at risk. A study was done in 2013 by <a href="www.oxfordmartin.ox.ac.uk/downloads/academic/The_Future_of_Employment.pdf.">Carl Frey and Michael Osborne</a>>, stated
                 47% of jobs may be at risk of being replaced by automation (Frey 2013).  That’s an astounding amount.
-                In 2016, Council of Economic Advisors (CEA) determined that 83% of people with an occupation that is
+                In 2016,<a href="https://obamawhitehouse.archives.gov/sites/whitehouse.gov/files/documents/Artificial-Intelligence-Automation-Economy.PDF"> Council of Economic Advisors</a>> (CEA) determined that 83% of people with an occupation that is
                 making less than twenty dollars per hour would be at risk. Positions making around twenty-forty an hour
                 have a 31% risk, and everyone making more than the would be staring down a 4% risk. So, if you are seeing
-                this, you might notice that’s mostly everyone. (Executive 2016).
+                this, you might notice that’s mostly everyone.
 
                     If we are looking at this the data the wrong way, we will say this is unethical. If you think it’s
                 unethical, you’ll say that people are going to suffer, we will be poverty stricken, and AI is going to
                 bring suffering.
 
-                    You might be right, but lets look at that report from the CEA again. That report tells me that 47%
+                You might be right, but lets look at that report from the <a href="https://obamawhitehouse.archives.gov/sites/whitehouse.gov/files/documents/Artificial-Intelligence-Automation-Economy.PDF">CEA</a> again. That report tells me that 47%
                 of jobs can be be replaced by AI, that means their jobs are probably shit. I believe we need to expect
                 more out of people. Lets see this as an opportunity to purge our lives of mundane and monotonous jobs.
                 Maybe we need this revolution more than we need our menial paycheck. People are resilient and you’d be
