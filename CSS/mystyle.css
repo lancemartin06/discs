@@ -25,6 +25,8 @@ nav {
 }
 div.profile{
     background-image: url(../Pictures/try.png);
+    background-size: cover;
+    background-position: center;
 }
 nav.black{
     background: rgba(0,0,0,0.6);
