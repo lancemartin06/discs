@@ -260,6 +260,7 @@ th:last-child {
 }
 .content table{
     align-self: center;
+    margin-left: 15%;
 }
 tr {
     border-top: 1px solid #C1C3D1;
