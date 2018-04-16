@@ -29,8 +29,10 @@ else {
               if (isset($_SESSION['foundDiscs'])) {
                         if($_SESSION['foundDiscs'] == true){
                             echo('FOUND!');
+                            } else{
+                            echo('No Discs in Database');
                             }
-                        } echo('No Discs in Database');
+                        }
               }?>
 
             <form action="profile.php" method="post" autocomplete="off">
