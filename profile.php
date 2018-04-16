@@ -54,7 +54,7 @@ else {
 
     </div>
 
-    <section class="content">
+    <section class="content"> <img src = "Pictures/try.png">
         <?php
             echo "<table style='border: solid 1px black;'>";
             echo "<tr><th>Id</th><th>Brand</th><th>Model</th><th>Color</th><th>Plastic</th><th>Owner</th><th>Phone</th></tr>";
