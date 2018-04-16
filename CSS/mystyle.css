@@ -23,7 +23,7 @@ nav {
     transition: .3s;
     
 }
-.div profile{
+div.profile{
     background-image: url(../Pictures/try.png);
 }
 nav.black{
