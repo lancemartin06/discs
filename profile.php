@@ -23,11 +23,15 @@ else {
 
           <h1>Welcome <?php echo($_SESSION['name']); ?></h1>
           
-          <p>Discs: <?php if (isset($_SESSION['foundDiscs'])) {
+          <p>Discs: <?php
+              if ($_SERVER['REQUEST_METHOD'] == 'POST')
+              {
+              if (isset($_SESSION['foundDiscs'])) {
                         if($_SESSION['foundDiscs']){
                             echo('FOUND!');
                             }
-                        } echo('No Discs in Database'); ?>
+                        } echo('No Discs in Database');
+              }?>
 
             <form action="profile.php" method="post" autocomplete="off">
 
