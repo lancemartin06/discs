@@ -7,7 +7,9 @@
     <title>Beginner's Guide</title>
 
     <section class="content">
-            <pre><h1>Beginner's Guide</h1>
+
+            <pre><img src = "Pictures/Courses/chains.png">
+                <h1>Beginner's Guide</h1>
 
                 This is a simple guide to help anyone who is new to Disc Golf to get
                 started with some helpful hints and tips!
