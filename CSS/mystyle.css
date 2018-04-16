@@ -149,7 +149,7 @@ margin-top: 10%;
     font-size: 20px;
     line-height: 30px;
 }
-.content pre begin{
+.content pre.begin{
     font-family: Quicksand;
     margin: 30px auto;
     text-align: center;
