@@ -27,7 +27,7 @@ else {
               if ($_SERVER['REQUEST_METHOD'] == 'POST')
               {
               if (isset($_SESSION['foundDiscs'])) {
-                        if($_SESSION['foundDiscs']){
+                        if($_SESSION['foundDiscs'] == true){
                             echo('FOUND!');
                             }
                         } echo('No Discs in Database');
