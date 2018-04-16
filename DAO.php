@@ -140,9 +140,11 @@ class dao
             if($stmt->execute())
             {
                 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                $_SESSION['foundDiscs'] = true;
                 return $result;
             }
             else{
+                $_SESSION['foundDiscs'] = false;
                 return "No Discs Found!";
             }
 
