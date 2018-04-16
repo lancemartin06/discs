@@ -18,7 +18,7 @@ else {
 ?>
   <link rel="stylesheet" href="CSS/mystyle2.css">
   <title>Welcome</title>
-
+  <div class="profile"> </div>
   <div class="form">
 
           <h1>Welcome <?php echo($_SESSION['name']); ?></h1>

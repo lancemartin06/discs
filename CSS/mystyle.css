@@ -23,7 +23,9 @@ nav {
     transition: .3s;
     
 }
-
+.div profile{
+    background-image: url(../Pictures/try.png);
+}
 nav.black{
     background: rgba(0,0,0,0.6);
     height: 100px;
