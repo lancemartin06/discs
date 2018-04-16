@@ -18,7 +18,7 @@ else {
 ?>
   <link rel="stylesheet" href="CSS/mystyle2.css">
   <title>Welcome</title>
-  <div class="profile"> </div>
+  <div class="profile">
   <div class="form">
 
           <h1>Welcome <?php echo($_SESSION['name']); ?></h1>
@@ -53,8 +53,8 @@ else {
           <a href="logout.php"><button class="button button-block" name="logout"/>Log Out</button></a>
 
     </div>
-
-    <section class="content"> <img src = "Pictures/try.png">
+  </div>
+    <section class="content">
         <?php
             echo "<table style='border: solid 1px black;'>";
             echo "<tr><th>Id</th><th>Brand</th><th>Model</th><th>Color</th><th>Plastic</th><th>Owner</th><th>Phone</th></tr>";
