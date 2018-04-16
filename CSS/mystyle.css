@@ -188,6 +188,8 @@ body{
 iframe{
     margin-top: 10%;
     margin-left:25%;
+    height: 50%;
+    width: 40%;
 }
 .intro{
     background-repeat: no-repeat;
