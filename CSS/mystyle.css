@@ -145,7 +145,7 @@ margin-top: 10%;
 .content pre{
     font-family: Quicksand;
     margin: 30px auto;
-    text-align: center;
+    text-align: left;
     font-size: 20px;
     line-height: 30px;
 }
@@ -178,10 +178,10 @@ body{
 }
 #map{
     float: center;
-    margin-top: 15%;
-    margin-left: 40%;
-    width:500px;
-    height:500px;
+    margin-top: 10%;
+    margin-left: 35%;
+    width:30%;
+    height:50%;
     background:black;
     border-style: solid;
 }
