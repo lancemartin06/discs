@@ -61,10 +61,12 @@ class dao
             {
                 $_SESSION['message'] = "Email is already in use!";
             }
+            //Hash Password
+            $password = hash("sha256", trim(htmlentities($pass) . "fKd93Vmz!k*dAv5029Vkf9$3Aa"));
             // prepare sql and bind parameters
             $stmt = $conn->prepare("INSERT INTO user (email, password, name, phone) VALUES (:email, :password, :name, :phone)");
             $stmt->bindParam(':email', $email);
-            $stmt->bindParam(':password', $pass);
+            $stmt->bindParam(':password', $password);
             $stmt->bindParam(':name', $name);
             $stmt->bindParam(':phone', $phone);
 
@@ -95,10 +97,11 @@ class dao
                 $_SESSION['message'] = "Email is invalid :( You should sign up!";
                 header('Location: lostDiscs.php');
             }
+            $password = hash("sha256", trim(htmlentities($pass) . "fKd93Vmz!k*dAv5029Vkf9$3Aa"));
             // prepare sql and bind parameters
             $stmt = $conn->prepare("SELECT * FROM user WHERE email = :email AND password = :password");
             $stmt->bindParam(':email', $email);
-            $stmt->bindParam(':password', $pass);
+            $stmt->bindParam(':password', $password);
 
             if($stmt->execute())
             {
