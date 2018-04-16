@@ -8,7 +8,7 @@
 
     <section class="content">
 
-            <pre><img src = "Pictures/Courses/chains.png">
+            <pre class ='begin'><img src = "Pictures/Courses/chains.png">
                 <h1>Beginner's Guide</h1>
 
                 This is a simple guide to help anyone who is new to Disc Golf to get
@@ -16,7 +16,7 @@
             </pre>
     </section>
     <section class="content">
-            <pre><h1>1. Learn the Technique</h1>
+            <pre class ='begin'><h1>1. Learn the Technique</h1>
 
                     Take time to learn how to throw. Start with the basics and work your way from there.
                     Don't feel bad because you can't rip it like the best of them. Many people need time
@@ -26,7 +26,7 @@
             </pre>
     </section>
     <section class="content">
-            <pre><h1>2. Practice</h1>
+            <pre  class ='begin'><h1>2. Practice</h1>
 
                     Learn to throw. Flat and low are the essential cornerstones
                 for any disc golfer. You need to establish a routine for developing
@@ -40,7 +40,7 @@
     </section>
 
     <section class="content">
-            <pre><h1>3. Play With Better Golfers</h1>
+            <pre class ='begin'><h1>3. Play With Better Golfers</h1>
 
                     Perfecting your technique will have to come from feedback
                 from experienced players. You'll find this is good advice for life in
@@ -51,7 +51,7 @@
     </section>
 
     <section class="content">
-            <pre><h1>4. Fewer Discs at First</h1>
+            <pre class ='begin'><h1>4. Fewer Discs at First</h1>
 
                     You might be tempted to buy very quality discs right away. Try tor resist
                 this urge. Develop the basics on the basics. Stick with starter discs until you
@@ -61,7 +61,7 @@
             </pre>
     </section>
     <section class="content">
-            <pre><h1>5. Have Fun.</h1>
+            <pre class ='begin'><h1>5. Have Fun.</h1>
 
                     Try to have fun and don't take yourself too seriously when you are
                 starting out! It's more fun when you can laugh at yourself. Lower expectations
