@@ -37,7 +37,7 @@ class dao
         $stmt->closeCursor();
         $conn = null;
 
-        if($result->rowCount() > 0) {
+        if(count($result) > 0) {
             return 1;
         }
         else {
