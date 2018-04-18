@@ -56,22 +56,23 @@ class dao
             if ($testUser == 1)
             {
                 $_SESSION['message'] = "Email is already in use!";
-            }
-            //Hash Password
-            $password = hash("sha256", trim(htmlentities($pass) . "fKd93Vmz!k*dAv5029Vkf9$3Aa"));
-            // prepare sql and bind parameters
-            $stmt = $conn->prepare("INSERT INTO user (email, password, name, phone) VALUES (:email, :password, :name, :phone)");
-            $stmt->bindParam(':email', $email);
-            $stmt->bindParam(':password', $password);
-            $stmt->bindParam(':name', $name);
-            $stmt->bindParam(':phone', $phone);
+                $_SESSION['alert'] = true;
+            } else {
+                $_SESSION['alert'] = false;
+                //Hash Password
+                $password = hash("sha256", trim(htmlentities($pass) . "fKd93Vmz!k*dAv5029Vkf9$3Aa"));
+                // prepare sql and bind parameters
+                $stmt = $conn->prepare("INSERT INTO user (email, password, name, phone) VALUES (:email, :password, :name, :phone)");
+                $stmt->bindParam(':email', $email);
+                $stmt->bindParam(':password', $password);
+                $stmt->bindParam(':name', $name);
+                $stmt->bindParam(':phone', $phone);
 
-            if($stmt->execute())
-            {
-                echo("New record created successfully");
-            }
-            else{
-                echo(" Failure to create account");
+                if ($stmt->execute()) {
+                    echo("New record created successfully");
+                } else {
+                    echo(" Failure to create account");
+                }
             }
             $conn = null;
         }
@@ -90,9 +91,12 @@ class dao
             $testUser = $this->confirmUser($email);
             if ($testUser == 0)
             {
-                $_SESSION['message'] = "Email is invalid :( You should sign up!";
+                $_SESSION['message'] = "Invalid Email";
+                $_SESSION['alert'] = true;
+
                 header('Location: lostDiscs.php');
             } else {
+                $_SESSION['alert'] = false;
                 $password = hash("sha256", trim(htmlentities($pass) . "fKd93Vmz!k*dAv5029Vkf9$3Aa"));
                 // prepare sql and bind parameters
                 $stmt = $conn->prepare("SELECT * FROM user WHERE email = :email AND password = :password");

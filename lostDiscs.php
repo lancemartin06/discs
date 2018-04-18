@@ -4,6 +4,12 @@ define("PAGENAME", "lostDiscs");
 
 require('header.php');
 
+//Display Message if exists
+if(isset($_SESSION['alert']) && $_SESSION['alert'] == true){
+    $message = $_SESSION['message'];
+    echo "<script type='text/javascript'>alert('$message');</script>";
+}
+
 $dao = new dao();
 ?>
 
