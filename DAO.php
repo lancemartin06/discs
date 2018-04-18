@@ -26,23 +26,19 @@ class dao
         $stmt->bindParam(':email', $email);
 
 
-        if($stmt->execute()){
-            echo '<pre> Query is good!  ';
-            echo '</pre>';
-
+        /*if($stmt->execute()){
             $result = $stmt->fetchAll();
         }
         else{
-            echo '<pre> Query failed!!!  ';
-            echo '</pre>';
-        }
+            $result = 0;
+        }*/
 
-
+        $result = $stmt->query();
 
         $stmt->closeCursor();
         $conn = null;
 
-        if($result != null) {
+        if($result->rowCount() > 0) {
             return 1;
         }
         else {
