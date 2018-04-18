@@ -26,14 +26,13 @@ class dao
         $stmt->bindParam(':email', $email);
 
 
-        /*if($stmt->execute()){
+        if($stmt->execute()){
             $result = $stmt->fetchAll();
         }
         else{
             $result = 0;
-        }*/
+        }
 
-        $result = $stmt->execute();
 
         $stmt->closeCursor();
         $conn = null;
