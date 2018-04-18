@@ -18,12 +18,13 @@ class dao
             die();
         }
     }
-    public function confirmUser($email)
+    public function confirmUser($email, $password)
     {
 
         $conn =$this->getConnection();
-        $stmt = $conn->prepare("SELECT * FROM user WHERE email = :email");
+        $stmt = $conn->prepare("SELECT * FROM user WHERE email = :email AND password = :password");
         $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':password', $password);
 
 
         if($stmt->execute()){
@@ -36,7 +37,6 @@ class dao
 
         $stmt->closeCursor();
         $conn = null;
-        echo('Here is result! ' . var_dump($result));
 
         if(count($result) > 0) {
             return 1;
@@ -88,16 +88,18 @@ class dao
         try {
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            $testUser = $this->confirmUser($email);
+            $password = hash("sha256", trim(htmlentities($pass) . "fKd93Vmz!k*dAv5029Vkf9$3Aa"));
+
+            $testUser = $this->confirmUser($email, $password);
             if ($testUser == 0)
             {
-                $_SESSION['message'] = "Invalid Email";
+                $_SESSION['message'] = "Invalid Login Credentials";
                 $_SESSION['alert'] = true;
 
                 header('Location: lostDiscs.php');
             } else {
                 $_SESSION['alert'] = false;
-                $password = hash("sha256", trim(htmlentities($pass) . "fKd93Vmz!k*dAv5029Vkf9$3Aa"));
+
                 // prepare sql and bind parameters
                 $stmt = $conn->prepare("SELECT * FROM user WHERE email = :email AND password = :password");
                 $stmt->bindParam(':email', $email);
