@@ -4,16 +4,19 @@ session_start();
 require_once 'header.php';
 $dao = new dao();
 // Check if user is logged in using the session variable
-if ( !isset($_SESSION['logged_in'])) {
+if (isset($_SESSION['logged_in']) == false) {
   $_SESSION['message'] = "You must log in before viewing your profile page!";
   header("Location: lostDiscs.php");
 }
-else {
+else if((isset($_SESSION['logged_in']) == true) && ($_SESSION['logged_in'] == true)){
     // Makes it easier to read
 
     $name = $_SESSION['name'];
     $phone = $_SESSION['phone'];
     $user_id = $_SESSION['user_id'];
+}
+else{
+    header("Location: lostDiscs.php");
 }
 ?>
   <link rel="stylesheet" href="CSS/mystyle2.css">
