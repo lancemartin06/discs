@@ -36,6 +36,7 @@ class dao
 
         $stmt->closeCursor();
         $conn = null;
+        echo('Here is result! ' . var_dump($result));
 
         if(count($result) > 0) {
             return 1;

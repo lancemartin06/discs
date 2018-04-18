@@ -17,8 +17,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     if (isset($_POST['login'])) {
         $dao->getUser($_POST['email'], $_POST['password']);
 
-        if($_SESSION['logged_in'] == true){
-            header('Location: profile.php');
+        if($_SESSION['logged_in'] === true){
+            //header('Location: profile.php');
         }
         else {
             header('Location: lostDiscs.php');
@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     } elseif (isset($_POST['signup'])) {
         $dao->addUser($_POST['email'], $_POST['password'], $_POST['name'], $_POST['phone']);
         echo($_SESSION['message']);
-        if($_SESSION['logged_in'] == true){
+        if($_SESSION['logged_in'] === true){
             header('Location: profile.php');
         }
         else {
