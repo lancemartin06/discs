@@ -92,32 +92,31 @@ class dao
             {
                 $_SESSION['message'] = "Email is invalid :( You should sign up!";
                 header('Location: lostDiscs.php');
-            }
-            $password = hash("sha256", trim(htmlentities($pass) . "fKd93Vmz!k*dAv5029Vkf9$3Aa"));
-            // prepare sql and bind parameters
-            $stmt = $conn->prepare("SELECT * FROM user WHERE email = :email AND password = :password");
-            $stmt->bindParam(':email', $email);
-            $stmt->bindParam(':password', $password);
+            } else {
+                $password = hash("sha256", trim(htmlentities($pass) . "fKd93Vmz!k*dAv5029Vkf9$3Aa"));
+                // prepare sql and bind parameters
+                $stmt = $conn->prepare("SELECT * FROM user WHERE email = :email AND password = :password");
+                $stmt->bindParam(':email', $email);
+                $stmt->bindParam(':password', $password);
 
-            if($stmt->execute())
-            {
-                $user = $stmt->fetch(PDO::FETCH_ASSOC);
-                $_SESSION['user_id'] = $user['user_id'];
-                $_SESSION['email'] = $user['email'];
-                $_SESSION['password'] = $user['password'];
-                $_SESSION['name'] = $user['name'];
-                $_SESSION['phone'] = $user['phone'];
-                $_SESSION['message'] = "Login Successful!";
-                $_SESSION['logged_in'] = true;
+                if ($stmt->execute()) {
+                    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+                    $_SESSION['user_id'] = $user['user_id'];
+                    $_SESSION['email'] = $user['email'];
+                    $_SESSION['password'] = $user['password'];
+                    $_SESSION['name'] = $user['name'];
+                    $_SESSION['phone'] = $user['phone'];
+                    $_SESSION['message'] = "Login Successful!";
+                    $_SESSION['logged_in'] = true;
 
-                $stmt->closeCursor();
+                    $stmt->closeCursor();
+                } else {
+                    $_SESSION['logged_in'] = false;
+                    $_SESSION['message'] = "Login Failed";
+                    $stmt->closeCursor();
+                }
+                $conn = null;
             }
-            else{
-                $_SESSION['logged_in'] = false;
-                $_SESSION['message'] = "Login Failed";
-                $stmt->closeCursor();
-            }
-            $conn = null;
         }
         catch(PDOException $e)
         {
