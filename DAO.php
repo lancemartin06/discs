@@ -33,7 +33,7 @@ class dao
             $result = 0;
         }*/
 
-        $result = $stmt->query();
+        $result = $stmt->execute();
 
         $stmt->closeCursor();
         $conn = null;
